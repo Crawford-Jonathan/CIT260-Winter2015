@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ww2.zombies;
+package ww2.zombies.main;
 
 import byui.cit260.ww2Zombies.model.Player;
 
