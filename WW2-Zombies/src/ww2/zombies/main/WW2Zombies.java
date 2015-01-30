@@ -7,6 +7,8 @@ package ww2.zombies.main;
 
 import byui.cit260.ww2Zombies.model.Map;
 import byui.cit260.ww2Zombies.model.Player;
+import byui.cit260.ww2Zombies.model.Actors;
+import byui.cit260.ww2Zombies.model.Game;
 
 /**
  *
@@ -36,6 +38,17 @@ public class WW2Zombies {
         
         String mapInfo = islandOne.toString();
         System.out.println(mapInfo);
+        
+        //Calls Game Class
+        Game newGame=new Game();
+        
+        //Calls Actors Class
+        Actors character=new Actors();
+        character.setActor(1);
+        character.setActor(2);
+        character.setActor(3);
+        character.setActor(4);
+        
     }
     
 }
