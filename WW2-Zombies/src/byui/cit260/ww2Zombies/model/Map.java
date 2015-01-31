@@ -14,9 +14,9 @@ import java.io.Serializable;
 public class Map  implements Serializable{
     
     //class instance variables
-    double rowCount;
-    double columnCount;
-    double areaDiscovered;
+    private double rowCount;
+    private double columnCount;
+    private double areaDiscovered;
 
     //constructor
     public Map() {
