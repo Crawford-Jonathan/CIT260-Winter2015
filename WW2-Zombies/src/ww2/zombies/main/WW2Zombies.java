@@ -8,7 +8,9 @@ package ww2.zombies.main;
 import byui.cit260.ww2Zombies.model.Map;
 import byui.cit260.ww2Zombies.model.Player;
 import byui.cit260.ww2Zombies.model.Actors;
+import byui.cit260.ww2Zombies.model.Animals;
 import byui.cit260.ww2Zombies.model.Game;
+import byui.cit260.ww2Zombies.model.Locations;
 
 /**
  *
@@ -38,6 +40,29 @@ public class WW2Zombies {
         
         String mapInfo = islandOne.toString();
         System.out.println(mapInfo);
+        
+        //calls Locations class
+        Locations roomOne = new Locations();    
+        
+        roomOne.setAnimals("deer");
+        roomOne.setEnemies("zombies");
+        roomOne.setItems("snake antivenom");
+        roomOne.setWeapons("M1 Garand");
+        roomOne.setLocationColumnCount(5);
+        roomOne.setLocationRowCount(5);
+        
+        String locationsInfo = roomOne.toString();
+        System.out.println(locationsInfo);
+        
+        //calls Animals class
+        Animals islandAnimals = new Animals();
+        
+        islandAnimals.setDeer("deer");
+        islandAnimals.setMonkey("monkey");
+        islandAnimals.setPheasent("pheasent");
+        
+        String animalsInfo = islandAnimals.toString();
+        System.out.println(animalsInfo);
         
         //Calls Game Class
         Game newGame=new Game();
