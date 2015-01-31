@@ -13,10 +13,17 @@ import java.util.Objects;
  * @author Jonathan
  */
 public class Actors implements Serializable{
+
     //private setCharName(){};
     //private setCharType(){};
     //private setCharDescript(){};
-
+//constructor
+    public Actors(String name) {
+        this.name = name;
+    }
+    
+    
+    
 //Class instance variable
     private String name;
     public Actors(){
