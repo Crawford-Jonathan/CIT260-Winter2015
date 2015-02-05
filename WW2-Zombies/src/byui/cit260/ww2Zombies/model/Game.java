@@ -13,7 +13,13 @@ import java.util.Objects;
  * @author Jonathan
  */
 public class Game implements Serializable{
-    //Class instance variable
+   
+    //constructor
+    public Game(String name) {
+        this.name = name;
+    }
+ 
+//Class instance variable
     private String name;
     public Game(){
     };
