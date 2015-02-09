@@ -68,11 +68,11 @@ public class WW2Zombies {
         Game newGame=new Game();
         
         //Calls Actors Class
-        Actors character=new Actors();
-        character.setActor(1);
-        character.setActor(2);
-        character.setActor(3);
-        character.setActor(4);
+        //Actors character=new Actors();
+        //character.setActor(1);
+        //character.setActor(2);
+        //character.setActor(3);
+        //character.setActor(4);
         
     }
     
