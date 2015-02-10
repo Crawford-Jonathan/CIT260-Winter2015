@@ -9,6 +9,7 @@ package byui.cit260.ww2Zombies.control;
  *
  * @author SilentMan
  */
-public class upgradeCarrySpace {
+public class InventoryControl {
     
+    public 
 }
