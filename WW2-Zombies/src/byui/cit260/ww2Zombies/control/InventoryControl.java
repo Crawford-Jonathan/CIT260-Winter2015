@@ -7,7 +7,7 @@ package byui.cit260.ww2Zombies.control;
 
 /**
  *
- * @author SilentMan
+ * @author SilentMan and Jonathan Crawford
  */
 public class InventoryControl {
     
@@ -43,5 +43,17 @@ public class InventoryControl {
 
     return volume;
     }
-    
+        public double calcBlast(double power, double diameter, double heat){
+        if (power < 20 || power > 60){
+            return -1;
+        }
+        if (diameter < 20 || diameter > 60){
+            return -1;
+        }
+        if (heat < 20 || heat > 60){
+            return -1;
+        }
+        double blast = power * diameter *heat;
+            return blast;
+    } 
 }
