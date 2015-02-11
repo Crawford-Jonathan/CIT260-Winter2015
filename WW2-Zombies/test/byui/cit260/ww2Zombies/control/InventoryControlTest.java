@@ -186,4 +186,8 @@ public class InventoryControlTest {
         result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
         assertEquals(expResult, result, 0.0001);
     }
+
+    @Test
+    public void testCalcBlast() {
+    }
 }
