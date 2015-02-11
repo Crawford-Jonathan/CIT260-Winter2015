@@ -144,4 +144,8 @@ public class InventoryControlTest {
         result = instance.upgradeCarrySpace(height, width, depth);
         assertEquals(expResult, result, 0.0001);
     }
+
+    @Test
+    public void testCalcBlast() {
+    }
 }
