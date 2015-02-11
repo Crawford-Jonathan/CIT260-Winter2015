@@ -44,4 +44,18 @@ public class InventoryControl {
         double blast = power * diameter *heat;
             return blast;
     } 
+        
+    public double ammoCapacity(int ammoAmount, double upgradeCarrySpace) {
+        
+        //values 
+        if (ammoAmount <0)
+            return -1;
+        
+        if (ammoAmount == 0)
+            return 0;
+        
+        double ammo = upgradeCarrySpace / ammoAmount;
+            return ammo;
+            
+    }
 }

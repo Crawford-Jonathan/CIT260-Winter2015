@@ -143,5 +143,47 @@ public class InventoryControlTest {
         expResult = 3456;
         result = instance.upgradeCarrySpace(height, width, depth);
         assertEquals(expResult, result, 0.0001);
+        
+        //END testcase upgradeCarrySpace
+    }
+    
+    public void ammoCapacity() {
+        System.out.println("ammoCapacity");
+        
+        System.out.println("Testcase #1");
+        double upgradeCarrySpace = 1152.0;
+        int ammoAmount = (int) 6.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 192.0;
+        double result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Testcase #2");
+        upgradeCarrySpace = 1152.0;
+        ammoAmount = (int) -1.0;
+        expResult = -1;
+        result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("Testcase #3");
+        upgradeCarrySpace = 1152.0;
+        ammoAmount = (int) 14.0;
+        expResult = -1;
+        result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("Testcase #4");
+        upgradeCarrySpace = 1152.0;
+        ammoAmount = (int) 0.0;
+        expResult = 0;
+        result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("Testcase #5");
+        upgradeCarrySpace = 1152.0;
+        ammoAmount = (int) 12.0;
+        expResult = 96;
+        result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
+        assertEquals(expResult, result, 0.0001);
     }
 }
