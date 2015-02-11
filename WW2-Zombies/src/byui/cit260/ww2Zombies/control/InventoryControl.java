@@ -14,27 +14,15 @@ public class InventoryControl {
     public double upgradeCarrySpace(double height, double width, double depth) {
         
          //check for invalid values
-    if (height <= 0) {
+    if (height <= 0 || height > 36) {
         return -1;
         }
     
-    if (width <= 0) {
+    if (width <= 0 || width > 24) {
         return -1;
         }
     
-    if (depth <= 0) {
-        return -1;
-        }
-
-    if (height > 36) {
-        return -1;
-        }
-    
-    if (width > 24) {
-        return -1;
-        }
-
-    if (depth > 12) {
+    if (depth <= 0 || depth > 12) {
         return -1;
         }
     
