@@ -11,14 +11,14 @@ package byui.cit260.ww2Zombies.control;
  */
 public class InventoryControl {
     
-    public double upgradeCarrySpace(double height, double width, double depth) {
+    public double upgradeCarrySpace(double width, double height, double depth) {
         
          //check for invalid values
-    if (height <= 0 || height > 36) {
+    if (width <= 0 || width > 36) {
         return -1;
         }
     
-    if (width <= 0 || width > 24) {
+    if (height <= 0 || height > 24) {
         return -1;
         }
     
@@ -27,7 +27,7 @@ public class InventoryControl {
         }
     
     //actual mathy part
-    double volume = height * width * depth;
+    double volume = width * height * depth;
 
     return volume;
     }
