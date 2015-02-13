@@ -54,7 +54,8 @@ public class InventoryControl {
         if (ammoAmount == 0)
             return 0;
         
-        double ammo = upgradeCarrySpace / ammoAmount;
+        double ammoDecimal = upgradeCarrySpace / ammoAmount;
+        int ammo = (int) ammoDecimal;
             return ammo;
             
     }
