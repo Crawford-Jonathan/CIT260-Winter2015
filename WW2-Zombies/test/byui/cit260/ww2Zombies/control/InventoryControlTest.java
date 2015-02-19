@@ -174,14 +174,14 @@ public class InventoryControlTest {
         *assertEquals(expResult, result, 0.0001);
         */
         
-        System.out.println("Testcase #4");
+        System.out.println("Testcase #3");
         upgradeCarrySpace = 1152.0;
         ammoAmount = (int) 0.0;
         expResult = 0;
         result = instance.ammoCapacity(ammoAmount, upgradeCarrySpace);
         assertEquals(expResult, result, 0.0001);
         
-        System.out.println("Testcase #5");
+        System.out.println("Testcase #4");
         upgradeCarrySpace = 1152.0;
         ammoAmount = (int) 12.0;
         expResult = 96;
