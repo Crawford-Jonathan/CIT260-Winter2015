@@ -5,6 +5,10 @@
  */
 package byui.cit260.ww2Zombies.view;
 
+import byui.cit260.ww2Zombies.control.ProgramControl;
+import byui.cit260.ww2Zombies.model.Player;
+import java.util.Scanner;
+
 /**display title screen / banner
  *press enter to continue and enter name
  *continue to main menu
@@ -15,6 +19,12 @@ public class StartProgramView{
     public void startProgram(){
         //displays the banner screen
         this.displayBanner();
+        
+        //get the Player name
+        String playersName = this.getPlayersName();
+        
+        //create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
     }
     private void displayBanner() {
         System.out.println(
@@ -48,6 +58,36 @@ public class StartProgramView{
         );
     }
     
+    //get the Player name, if new name than create new Player account
+    public String getPlayersName() {
+        //indicates if player name has been retreived
+        boolean valid = false;
+        String playersName = null;
+        //gets input from the keyboard
+        Scanner keyboard = new Scanner(System.in);
+        
+        while(!valid) {
+            //asks for players name
+            System.out.println("Enter the player's name below");
+            
+            //gets name from the keyboard and trims off the blanks
+            playersName = keyboard.nextLine();
+            playersName = playersName.trim();
+            
+            //invalid cases
+            if (playersName.length() < 2) {
+                System.out.println("Invalid name - name must be longer than 2 characters");
+                //repeats
+                continue;
+            }
+            
+            //breaks out of the repetition
+            break;
+        }
+        //return the playersNAme
+        return playersName;
+        
+        }
     
     
 }
