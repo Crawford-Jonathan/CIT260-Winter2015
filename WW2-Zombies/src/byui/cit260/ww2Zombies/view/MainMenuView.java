@@ -9,6 +9,6 @@ package byui.cit260.ww2Zombies.view;
  *
  * @author SilentMan
  */
-public class MainMenu {
+public class MainMenuView {
     
 }

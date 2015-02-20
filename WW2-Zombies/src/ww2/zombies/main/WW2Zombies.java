@@ -5,12 +5,12 @@
  */
 package ww2.zombies.main;
 
-import byui.cit260.ww2Zombies.model.Map;
+//import byui.cit260.ww2Zombies.model.Map;
 import byui.cit260.ww2Zombies.model.Player;
-import byui.cit260.ww2Zombies.model.Actors;
-import byui.cit260.ww2Zombies.model.Animals;
+//import byui.cit260.ww2Zombies.model.Actors;
+//import byui.cit260.ww2Zombies.model.Animals;
 import byui.cit260.ww2Zombies.model.Game;
-import byui.cit260.ww2Zombies.model.Locations;
+//import byui.cit260.ww2Zombies.model.Locations;
 import byui.cit260.ww2Zombies.view.StartProgramView;
 
 /**
