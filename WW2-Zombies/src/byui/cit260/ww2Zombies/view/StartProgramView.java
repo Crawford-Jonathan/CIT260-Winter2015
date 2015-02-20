@@ -28,6 +28,10 @@ public class StartProgramView{
         
         //displays the welcome message
         this.displayWelcomeMessage(player);
+        
+        //display Main Menu
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
     }
     private void displayBanner() {
         System.out.println(
@@ -94,7 +98,7 @@ public class StartProgramView{
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n================================================");
-        System.out.println("\tWelcometo the game Private " + player.getName());
+        System.out.println("\tWelcome to the game Sergeant " + player.getName());
         System.out.println("\tGo out there and do your country proud!");
         System.out.println("====================================================");
     }

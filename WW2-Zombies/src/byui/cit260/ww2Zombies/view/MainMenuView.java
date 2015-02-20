@@ -10,5 +10,9 @@ package byui.cit260.ww2Zombies.view;
  * @author SilentMan
  */
 public class MainMenuView {
+
+    void displayMenu() {
+        System.out.println("***MainMenuView.displayMenu() function has been called***");
+    }
     
 }
