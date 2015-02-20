@@ -14,5 +14,23 @@ public class MainMenuView {
     void displayMenu() {
         System.out.println("***MainMenuView.displayMenu() function has been called***");
     }
+    private final String MENU = "\n"
+            + "\n--------------------------------"
+            + "\n| Main Menu                    |"
+            + "\n--------------------------------"
+            + "\nG - Start Game"
+            + "\nC - Continue Saved Game"
+            + "\nH - Get Help On How to Play The Game"
+            + "\nS - Save Game"
+            + "\nE - Exit"
+            + "\n--------------------------------";
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
