@@ -12,32 +12,42 @@ package byui.cit260.ww2Zombies.view;
 public class StartProgramView{
     public StartProgramView(){
     }
-    public void startGame(){
+    public void startProgram(){
+        //displays the banner screen
         this.displayBanner();
     }
     private void displayBanner() {
         System.out.println(
-                "/n/n*********************************************************"
+                "\n\n*********************************************************"
         );
         System.out.println(
-                "*                                                           *"
-                + "/n*              Welcome to the Jungle                  *"
-                + "/n*              Congradulations Soldier!                 *"
-                + "/n*     You have been selected for a special mission.     *"
-                + "/n*            Mission Briefing will follow.              *"
-                + "/n*                                                       *"
+                    "*                                                       *"
+                + "\n*              Welcome to the Jungle                    *"
+                + "\n*              Congradulations Soldier!                 *"
+                + "\n*     You have been selected for a special mission.     *"
+                + "\n*            Mission Briefing will follow.              *"
+                + "\n*                                                       *"
         );
         System.out.println(
-                "*                                                           *"
-                + "n/*                     Your MIssion:                     *"
-                + "n/*            There have been reports from M.I.          *"
-                + "n/*          suggesting that a previously uninhabited *"
-                        + "n/*         island by Japan has been occupied by "
-                        + "               the Germans. You are to go to this island "
-                        + " and find out what they are doing there and "
-                        + "disrupt their operations. You and your fire-team will be air-dropped in 0400."
-                        + "Good luck Soldier. "
-                        + "P.S. Watch out for the jungle life, some may want your blood.....           *"
+                    "*                                                       *"
+                + "\n*                     Your Mission:                     *"
+                + "\n*            There have been reports from M.I.          *"
+                + "\n*          suggesting that a previously uninhabited     *"
+                + "\n*         island by Japan has been occupied by          *"
+                + "\n*         the Germans. You are to go to this island     *"                
+                + "\n*        and find out what they are doing there and     *"
+                + "\n*          disrupt their operations. You and your       *"
+                + "\n*           fire-team will be air-dropped in 0400.      *"
+                + "\n*                  Good luck Soldier.                   *"
+                + "\n*             P.S. Watch out for the jungle life,       *"
+                + "\n*                some may want your blood.....          *"
+                + "\n*                                                       *"
+        );
+        System.out.println(
+                  "***********************************************************"
         );
     }
+    
+    
+    
 }

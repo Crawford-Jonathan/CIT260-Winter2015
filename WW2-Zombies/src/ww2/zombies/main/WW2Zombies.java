@@ -11,6 +11,7 @@ import byui.cit260.ww2Zombies.model.Actors;
 import byui.cit260.ww2Zombies.model.Animals;
 import byui.cit260.ww2Zombies.model.Game;
 import byui.cit260.ww2Zombies.model.Locations;
+import byui.cit260.ww2Zombies.view.StartProgramView;
 
 /**
  *
@@ -22,6 +23,10 @@ public class WW2Zombies {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //creates StartProgramView and start the progress
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
         
         //calls the Player class
         Player playerOne = new Player();
