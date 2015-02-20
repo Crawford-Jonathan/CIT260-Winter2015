@@ -18,15 +18,33 @@ import byui.cit260.ww2Zombies.view.StartProgramView;
  * @author SilentMan
  */
 public class WW2Zombies {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
 
-    /**
-     * @param args the command line arguments
-     */
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        WW2Zombies.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        WW2Zombies.player = player;
+    }
+
     public static void main(String[] args) {
         
         //creates StartProgramView and start the progress
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
+        
+        /*
         
         //calls the Player class
         Player playerOne = new Player();
@@ -79,6 +97,7 @@ public class WW2Zombies {
         //character.setActor(3);
         //character.setActor(4);
         
+        */
     }
     
 }

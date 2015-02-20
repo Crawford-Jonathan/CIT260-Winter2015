@@ -6,6 +6,7 @@
 package byui.cit260.ww2Zombies.control;
 
 import byui.cit260.ww2Zombies.model.Player;
+import ww2.zombies.main.WW2Zombies;
 
 /**
  *
@@ -13,9 +14,19 @@ import byui.cit260.ww2Zombies.model.Player;
  */
 public class ProgramControl {
 
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n**** createPlayer function calles ****");
-        return null;
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        //saves the player
+        WW2Zombies.setPlayer(player);
+        
+        return player;
     }
     
 }

@@ -25,6 +25,9 @@ public class StartProgramView{
         
         //create and save the player object
         Player player = ProgramControl.createPlayer(playersName);
+        
+        //displays the welcome message
+        this.displayWelcomeMessage(player);
     }
     private void displayBanner() {
         System.out.println(
@@ -88,6 +91,13 @@ public class StartProgramView{
         return playersName;
         
         }
+
+    private void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n================================================");
+        System.out.println("\tWelcometo the game Private " + player.getName());
+        System.out.println("\tGo out there and do your country proud!");
+        System.out.println("====================================================");
+    }
     
     
 }
