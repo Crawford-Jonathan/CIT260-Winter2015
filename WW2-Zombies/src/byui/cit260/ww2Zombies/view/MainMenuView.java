@@ -10,10 +10,6 @@ package byui.cit260.ww2Zombies.view;
  * @author SilentMan
  */
 public class MainMenuView {
-
-    void displayMenu() {
-        System.out.println("***MainMenuView.displayMenu() function has been called***");
-    }
     private final String MENU = "\n"
             + "\n--------------------------------"
             + "\n| Main Menu                    |"
@@ -24,13 +20,22 @@ public class MainMenuView {
             + "\nS - Save Game"
             + "\nE - Exit"
             + "\n--------------------------------";
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public void displayMenu(){
+        char selection = ' ';
+        do {
+            System.out.println(MENU);//display Main Menu
+            String input = this.getInput();//get users selection
+            selection =input.charAt(0);//get first character of string
+            this.doAction(selection);//do action base off selection
+        } 
+        while (selection ! = 'E');//selecton is not "Exit"    (I do not understand what is wrong with this nor how to change it)
+    }
+
+    private void doAction(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
