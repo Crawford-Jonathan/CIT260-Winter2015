@@ -5,10 +5,16 @@
  */
 package byui.cit260.ww2Zombies.control;
 
+import byui.cit260.ww2Zombies.model.Player;
+
 /**
  *
  * @author Jonathan
  */
 public class GameControl {
+
+    public static void createNewGame(Player player) {
+        System.out.println("createNewGame stub called");
+    }
     
 }

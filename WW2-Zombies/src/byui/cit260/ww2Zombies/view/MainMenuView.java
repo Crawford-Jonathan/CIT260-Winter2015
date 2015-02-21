@@ -5,6 +5,11 @@
  */
 package byui.cit260.ww2Zombies.view;
 
+import byui.cit260.ww2Zombies.control.GameControl;
+import byui.cit260.ww2Zombies.model.GameMenuView;
+import java.util.Scanner;
+import ww2.zombies.main.WW2Zombies;
+
 /**
  *
  * @author SilentMan
@@ -14,7 +19,7 @@ public class MainMenuView {
             + "\n--------------------------------"
             + "\n| Main Menu                    |"
             + "\n--------------------------------"
-            + "\nG - Start Game"
+            + "\nG - Start New Game"
             + "\nC - Continue Saved Game"
             + "\nH - Get Help On How to Play The Game"
             + "\nS - Save Game"
@@ -28,14 +33,84 @@ public class MainMenuView {
             selection =input.charAt(0);//get first character of string
             this.doAction(selection);//do action base off selection
         } 
-        while (selection != 'E');//selecton is not "Exit"    (I do not understand what is wrong with this nor how to change it)
+        while (selection != 'E');//selecton is not "Exit"
     }
 
-    private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void doAction(char choice) {
+        switch (choice) {
+            case 'G':
+                this.startNewGame();
+                break;
+            case 'C':
+                this.continueSavedGame();
+                break;
+            case 'H':
+                this.helpMenu();
+                break;
+            case 'S':
+                this.saveCurrentGame();
+                break;
+            case 'E':
+                return;
+            default:
+                System.out.println("\n*** Invalid Selection *** Please Try Again");
+                break;
+        }
     }
+    
+        private void startNewGame() {
+            //System.out.println("startNewGame function called");
+            GameControl.createNewGame(WW2Zombies.getPlayer());
+            
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.displayMenu();
+        }
+        
+        private void continueSavedGame() {
+            System.out.println("continue saved game function called");
+        }
+        
+        private void helpMenu() {
+            System.out.println("helpMenu called");
+        }
+        
+        private void saveCurrentGame() {
+            System.out.println("save game function called");
+        }
 
     private String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        //get the Player name, if new name than create new Player account
+    
+        //indicates if player name has been retreived
+        boolean valid = false;
+        String keyboardInput = null;
+        //gets input from the keyboard
+        Scanner keyboard = new Scanner(System.in);
+        
+        while(!valid) {
+            //asks for input
+            System.out.println("Enter Command");
+            
+            //gets input from the keyboard and trims off the blanks
+            keyboardInput = keyboard.nextLine();
+            keyboardInput = keyboardInput.trim();
+            //selection = Character.toUpperCase(selection);
+            
+            //invalid cases
+            if (keyboardInput.length() != 1) {
+                System.out.println("Invalid Input");
+                //repeats
+                continue;
+            }
+            
+            //breaks out of the repetition
+            break;
+        }
+        //return the keyboardInput
+        return keyboardInput;
+        
+        }
+
+
+    
 }
