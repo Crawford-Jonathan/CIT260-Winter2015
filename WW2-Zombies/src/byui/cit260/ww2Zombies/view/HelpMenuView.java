@@ -5,52 +5,53 @@
  */
 package byui.cit260.ww2Zombies.view;
 
-import byui.cit260.ww2Zombies.control.GameControl;
-import byui.cit260.ww2Zombies.model.GameMenuView;
 import java.util.Scanner;
-import ww2.zombies.main.WW2Zombies;
 
 /**
  *
  * @author SilentMan
  */
-public class MainMenuView {
+public class HelpMenuView {
     private final String MENU = "\n"
             + "\n--------------------------------"
-            + "\n| Main Menu                    |"
+            + "\n| Help Menu                    |"
             + "\n--------------------------------"
-            + "\nG - Start New Game"
-            + "\nC - Continue Saved Game"
-            + "\nH - Get Help On How to Play The Game"
-            + "\nS - Save Game"
-            + "\nE - Exit"
+            + "\nD - Game Description"
+            + "\nL - Look Around"
+            //+ "\nW - Move North"
+            //+ "\nS - Move South"
+            //+ "\nA - Move East"
+            //+ "\nD - Move West"
+            + "\nM - View Map"
+            + "\nV - View Inventory"
+            + "\nR - Return to Previous Menu"
             + "\n--------------------------------";
     public void displayMenu(){
         char selection = ' ';
         do {
-            System.out.println(MENU);//display Main Menu
+            System.out.println(MENU);//display Help Menu
             String input = this.getInput();//get users selection
             selection =input.charAt(0);//get first character of string
             this.doAction(selection);//do action base off selection
         } 
-        while (selection != 'E');//selecton is not "Exit"
+        while (selection != 'R');//selecton is not "R"
     }
 
     private void doAction(char choice) {
         switch (choice) {
-            case 'G':
-                this.startNewGame();
+            case 'D':
+                this.gameDescription();
                 break;
-            case 'C':
-                this.continueSavedGame();
+            case 'L':
+                this.lookAround();
                 break;
-            case 'H':
-                this.helpMenu();
+            case 'M':
+                this.viewMap();
                 break;
-            case 'S':
-                this.saveCurrentGame();
+            case 'V':
+                this.viewInventory();
                 break;
-            case 'E':
+            case 'R':
                 return;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
@@ -58,25 +59,20 @@ public class MainMenuView {
         }
     }
     
-        private void startNewGame() {
-            //System.out.println("startNewGame function called");
-            GameControl.createNewGame(WW2Zombies.getPlayer());
-            
-            GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayMenu();
+        private void gameDescription() {
+            System.out.println("place game description here");
         }
         
-        private void continueSavedGame() {
-            System.out.println("continue saved game function called");
+        private void lookAround() {
+            System.out.println("you see stuff");
         }
         
-        private void helpMenu() {
-            HelpMenuView helpMenu = new HelpMenuView();
-            helpMenu.displayMenu();
+        private void viewMap() {
+            System.out.println("shows the map");
         }
         
-        private void saveCurrentGame() {
-            System.out.println("save game function called");
+        private void viewInventory() {
+            System.out.println("view your stuff");
         }
 
     private String getInput() {
@@ -110,8 +106,7 @@ public class MainMenuView {
         //return the keyboardInput
         return keyboardInput;
         
-        }
-
-
-    
+    }
 }
+        
+
