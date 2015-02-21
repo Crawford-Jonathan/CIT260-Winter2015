@@ -28,7 +28,7 @@ public class MainMenuView {
             selection =input.charAt(0);//get first character of string
             this.doAction(selection);//do action base off selection
         } 
-        while (selection ! = 'E');//selecton is not "Exit"    (I do not understand what is wrong with this nor how to change it)
+        while (selection != 'E');//selecton is not "Exit"    (I do not understand what is wrong with this nor how to change it)
     }
 
     private void doAction(char selection) {
