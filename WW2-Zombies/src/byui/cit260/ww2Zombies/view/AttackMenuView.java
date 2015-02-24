@@ -7,9 +7,9 @@ package byui.cit260.ww2Zombies.view;
 
 import java.util.Scanner;
 
-/**
- *
- * @author SilentMan
+/**Class is meant to be called from the Map View
+ *The map View has yet to be created
+ * We're working on it
  */
 public class AttackMenuView {
     private final String ATTACKMENU = "\n"
