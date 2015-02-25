@@ -7,8 +7,8 @@ package byui.cit260.ww2Zombies.view;
 
 import java.util.Scanner;
 
-/**Class is meant to be called from the Map View
- *The map View has yet to be created
+/**Class is meant to be called from the Room View
+ *The Room View has yet to be created
  * We're working on it
  */
 public class AttackMenuView {
@@ -18,7 +18,8 @@ public class AttackMenuView {
             + "\n--------------------------------"
             + "\nA - Attack"
             + "\nG - Throw Grenade"
-            + "\nS - Stop Attack"
+            //stop attack is the same as retreat to previous menu
+            //+ "\nS - Stop Attack"
             + "\nR - Retreat to Previous Menu"
             + "\n--------------------------------";
     public void displayMenu(){
