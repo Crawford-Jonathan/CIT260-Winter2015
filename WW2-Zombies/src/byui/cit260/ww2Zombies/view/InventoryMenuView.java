@@ -20,6 +20,7 @@ public class InventoryMenuView {
             +"\nP - Pick up Item"
             +"\nD - Drop Item"
             +"\nU - Use Item"
+            +"\nE - Equip Item"
             +"\nM - Veiw Map"
             +"\nR - Return to Previous Menu"
             +"\n-------------------------------------";
@@ -31,7 +32,7 @@ public class InventoryMenuView {
             selection =input.charAt(0);//get first character of string
             this.doAction(selection);//do action base off selection
         } 
-        while (selection != 'R' || selection != 'E');
+        while (selection != 'R');
     }
     private void doAction(char choice){
         switch (choice){
@@ -43,6 +44,9 @@ public class InventoryMenuView {
                 break;
             case 'U':
                 this.useItem();
+                break;
+            case 'E':
+                this.equipItem();
                 break;
             case 'V':
                 this.viewMap();
@@ -64,6 +68,9 @@ public class InventoryMenuView {
         }
         private void useItem(){
             System.out.println("Uses item.");
+        }
+        private void equipItem(){
+            System.out.println("Equips Item.");
         }
         private void viewMap(){
             System.out.println("Looks at map.");
