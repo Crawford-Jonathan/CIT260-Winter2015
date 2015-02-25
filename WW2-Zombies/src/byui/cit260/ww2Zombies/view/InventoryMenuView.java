@@ -5,6 +5,7 @@
  */
 package byui.cit260.ww2Zombies.view;
 
+import byui.cit260.ww2Zombies.control.InventoryControl;
 import java.util.Scanner;
 
 /**
@@ -55,6 +56,8 @@ public class InventoryMenuView {
     }
         private void pickUpItem(){
             System.out.println("Picks up item.");
+            //InventoryControl inventorySpace = new InventoryControl();
+            //inventorySpace.upgradeCarrySpace(width, height, depth);
         }
         private void dropItem(){
             System.out.println("Drops item on the ground.");
