@@ -59,7 +59,7 @@ public class AttackMenuView {
         }
         
         private void throwGrenade() {
-            System.out.println("wait 5 seconds for results");
+            System.out.println("wait 5 seconds for explosion");
         }
 
     private String getInput() {
