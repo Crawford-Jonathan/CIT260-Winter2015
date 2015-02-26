@@ -24,6 +24,7 @@ public class HelpMenuView {
             //+ "\nD - Move West"
             + "\nM - View Map"
             + "\nV - View Inventory"
+            
             + "\nR - Return to Previous Menu"
             + "\n--------------------------------";
     public void displayMenu(){
@@ -51,6 +52,7 @@ public class HelpMenuView {
             case 'V':
                 this.viewInventory();
                 break;
+            
             case 'R':
                 return;
             default:
@@ -74,7 +76,7 @@ public class HelpMenuView {
         private void viewInventory() {
             System.out.println("view your stuff");
         }
-
+        
     private String getInput() {
         //get the Player name, if new name than create new Player account
     
