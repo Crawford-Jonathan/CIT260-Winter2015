@@ -3,28 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.ww2Zombies.view;
+package byui.cit260.ww2Zombies.control;
 
-//import byui.cit260.ww2Zombies.control.UpgradeCarrySpace;
-import byui.cit260.ww2Zombies.control.InventoryControl;
 import java.util.Scanner;
 
-/**
- *
- * @author Jonathan
+/**I'm really not quite sure how to get the inputs to redirect to a variable
+ * that can be put into a math formula.
+ * Once I know how to do that, all I have to do is get the code from the InventoryControl
+ * and put it in.
  */
-public class InventoryMenuView {
+public class upgradeCarrySpace {
+ 
     private final String MENU = "\n"
-            +"\n-------------------------------------"
-            +"\n| Inventory Menu                    |"
-            +"\n-------------------------------------"
-            +"\nP - Pick up Item"
-            +"\nD - Drop Item"
-            +"\nU - Use Item"
-            +"\nE - Equip Item"
-            +"\nM - Veiw Map"
-            +"\nR - Return to Previous Menu"
-            +"\n-------------------------------------";
+            + "\n--------------------------------"
+            + "\n| Upgrading Your Backpack                    |"
+            + "\n--------------------------------"
+            + "\nW - Enter the Width of the Backpack"
+            + "\nH - Enter the Height of the Backpack"
+            + "\nD - Enter the Depth of the Backpack"
+            //+ "\nD - Enter Backpack Dimensions"
+            + "\nR - Return to Previous Menu"
+            + "\n--------------------------------";
     public void displayMenu(){
         char selection = ' ';
         do {
@@ -33,25 +32,25 @@ public class InventoryMenuView {
             selection =input.charAt(0);//get first character of string
             this.doAction(selection);//do action base off selection
         } 
-        while (selection != 'R');
+        while (selection != 'R');//selecton is not "R"
     }
-    private void doAction(char choice){
-        switch (choice){
-            case 'P':
-                this.pickUpItem();
+
+    private void doAction(char choice) {
+        switch (choice) {
+            case 'W':
+                //double width = this.width();
+                this.width();
+                break;
+            case 'H':
+                this.height();
                 break;
             case 'D':
-                this.dropItem();
+                this.depth();
                 break;
-            case 'U':
-                this.useItem();
-                break;
-            case 'E':
-                this.equipItem();
-                break;
-            case 'V':
-                this.viewMap();
-                break;
+               
+            //case 'D':
+            //     this.backpackDimensions();
+            //    break;
             case 'R':
                 return;
             default:
@@ -59,27 +58,25 @@ public class InventoryMenuView {
                 break;
         }
     }
-        private void pickUpItem(){
-            System.out.println("Picks up item.");
-            //UpgradeCarrySpace gameMenu = new UpgradeCarrySpace();
-            //gameMenu.displayMenu();
+        
+        private void width() {
+            System.out.println("");
         }
-        private void dropItem(){
-            System.out.println("Drops item on the ground.");
+        
+        private void height() {
+            System.out.println("");
         }
-        private void useItem(){
-            System.out.println("Uses item.");
+        
+        private void depth() {
+            System.out.println("");
         }
-        private void equipItem(){
-            System.out.println("Equips Item.");
-        }
-        private void viewMap(){
-            System.out.println("Looks at map.");
-        }
-    private String getInput() {
-        //get the Player name, if new name than create new Player account
-    
-        //indicates if player name has been retreived
+        
+        //private void backpackDimensions() {}
+            
+        
+
+    private String getInput() {    
+        
         boolean valid = false;
         String keyboardInput = null;
         //gets input from the keyboard
@@ -106,5 +103,11 @@ public class InventoryMenuView {
         }
         //return the keyboardInput
         return keyboardInput;
+        
     }
 }
+        
+
+
+    
+  
