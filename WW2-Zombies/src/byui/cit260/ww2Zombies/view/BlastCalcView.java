@@ -84,6 +84,18 @@ public class BlastCalcView {
         return returnValue;        
     }
     
-    
+    public double calcBlast(double power, double diameter, double heat){
+        if (power < 20 || power > 60){
+            return -1;
+        }
+        if (diameter < 20 || diameter > 60){
+            return -1;
+        }
+        if (heat < 20 || heat > 60){
+            return -1;
+        }
+        double blast = power * diameter *heat;
+            return blast;
+    } 
     
 }

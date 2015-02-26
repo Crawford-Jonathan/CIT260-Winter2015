@@ -31,7 +31,7 @@ public class InventoryControl {
 
     return volume;
     }
-        public double calcBlast(double power, double diameter, double heat){
+    public double calcBlast(double power, double diameter, double heat){
         if (power < 20 || power > 60){
             return -1;
         }
