@@ -88,7 +88,7 @@ public class InventoryMenuView {
             //gets input from the keyboard and trims off the blanks
             keyboardInput = keyboard.nextLine();
             keyboardInput = keyboardInput.trim();
-            //selection = Character.toUpperCase(selection);
+            //input.CharAt(0) = Character.toUpperCase(input.CharAt(0));
             
             //invalid cases
             if (keyboardInput.length() != 1) {
