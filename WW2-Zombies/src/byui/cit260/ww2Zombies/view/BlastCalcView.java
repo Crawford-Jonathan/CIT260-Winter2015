@@ -48,8 +48,14 @@ public class BlastCalcView {
             //get input from command line
             inputHeat = this.getInput();//get users selection
             
-            if (inputHeat >19 && inputHeat <61){
-                goodInput3 = true;
+            if (inputHeat <20){
+                goodInput3 = !true;
+            }
+            else if (inputHeat >60){
+                goodInput3 = !true;
+            }
+            else {
+                 goodInput3 = true;
             }
         }
         //get the Player name, if new name than create new Player account
