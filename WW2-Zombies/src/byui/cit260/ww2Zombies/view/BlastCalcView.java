@@ -17,7 +17,7 @@ public class BlastCalcView {
     private int heat;
     
     
-    private String getInput(){
+    private int getInput(){
         
         Boolean goodInput1 = false;
         Boolean goodInput2 = false;
@@ -34,20 +34,30 @@ public class BlastCalcView {
             if (inputPower >19 && inputPower <61){
                 goodInput1 = true;
             }
-            
-                    
-           
-        }
         
-    }
-    
-    private int getInput() {
+        }
+        while (goodInput2 == false){
+            //get input from command line
+            inputDiameter = this.getInput();//get users selection
+            
+            if (inputDiameter >19 && inputDiameter <61){
+                goodInput2 = true;
+            }
+        }
+        while (goodInput3 == false){
+            //get input from command line
+            inputHeat = this.getInput();//get users selection
+            
+            if (inputHeat >19 && inputHeat <61){
+                goodInput3 = true;
+            }
+        }
         //get the Player name, if new name than create new Player account
     
         //indicates if player name has been retreived
         boolean valid = false;
         String keyboardInput = null;
-        int returnValue;
+        int returnValue = 56;
         //gets input from the keyboard
         Scanner keyboard = new Scanner(System.in);
         
@@ -66,13 +76,14 @@ public class BlastCalcView {
                 //repeats
                 continue;
             }
-            //convert from string to int
             
             //breaks out of the repetition
             break;
         }
         //return the keyboardInput
-        return returnValue;
+        return returnValue;        
     }
+    
+    
     
 }
