@@ -13,8 +13,9 @@ import java.util.Scanner;
  *
  * @author Jonathan
  */
-public class InventoryMenuView {
-    private final String MENU = "\n"
+public class InventoryMenuView extends View {
+ public InventoryMenuView(){
+    super( "\n"
             +"\n-------------------------------------"
             +"\n| Inventory Menu                    |"
             +"\n-------------------------------------"
@@ -24,17 +25,9 @@ public class InventoryMenuView {
             +"\nE - Equip Item"
             +"\nM - Veiw Map"
             +"\nR - Return to Previous Menu"
-            +"\n-------------------------------------";
-    public void displayMenu(){
-        char selection = ' ';
-        do {
-            System.out.println(MENU);//display Help Menu
-            String input = this.getInput();//get users selection
-            selection =input.charAt(0);//get first character of string
-            this.doAction(selection);//do action base off selection
-        } 
-        while (selection != 'R');
-    }
+            +"\n-------------------------------------");
+}
+    
     private void doAction(char choice){
         switch (choice){
             case 'P':
@@ -76,35 +69,10 @@ public class InventoryMenuView {
         private void viewMap(){
             System.out.println("Looks at map.");
         }
-    private String getInput() {
-        //get the Player name, if new name than create new Player account
     
-        //indicates if player name has been retreived
-        boolean valid = false;
-        String keyboardInput = null;
-        //gets input from the keyboard
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            //asks for input
-            System.out.println("Enter Command");
-            
-            //gets input from the keyboard and trims off the blanks
-            keyboardInput = keyboard.nextLine();
-            keyboardInput = keyboardInput.trim();
-            //input.CharAt(0) = Character.toUpperCase(input.CharAt(0));
-            
-            //invalid cases
-            if (keyboardInput.length() != 1) {
-                System.out.println("Invalid Input");
-                //repeats
-                continue;
-            }
-            
-            //breaks out of the repetition
-            break;
-        }
-        //return the keyboardInput
-        return keyboardInput;
+
+    @Override
+    public void doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
