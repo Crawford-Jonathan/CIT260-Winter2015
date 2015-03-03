@@ -69,5 +69,10 @@ public class HelpMenuView extends View{
         private void viewInventory() {
             System.out.println("view your stuff");
         }
+
+    @Override
+    public void doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
 } 
