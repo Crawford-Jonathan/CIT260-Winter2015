@@ -11,8 +11,10 @@ import java.util.Scanner;
  *
  * @author SilentMan
  */
-public class HelpMenuView {
-    private final String MENU = "\n"
+public class HelpMenuView extends View{
+    
+    public HelpMenuView() {
+    super("\n"
             + "\n--------------------------------"
             + "\n| Help Menu                    |"
             + "\n--------------------------------"
@@ -26,16 +28,7 @@ public class HelpMenuView {
             + "\nV - View Inventory"
             
             + "\nR - Return to Previous Menu"
-            + "\n--------------------------------";
-    public void displayMenu(){
-        char selection = ' ';
-        do {
-            System.out.println(MENU);//display Help Menu
-            String input = this.getInput();//get users selection
-            selection =input.charAt(0);//get first character of string
-            this.doAction(selection);//do action base off selection
-        } 
-        while (selection != 'R');//selecton is not "R"
+            + "\n--------------------------------");
     }
 
     private void doAction(char choice) {
@@ -77,37 +70,4 @@ public class HelpMenuView {
             System.out.println("view your stuff");
         }
         
-    private String getInput() {
-        //get the Player name, if new name than create new Player account
-    
-        //indicates if player name has been retreived
-        boolean valid = false;
-        String keyboardInput = null;
-        //gets input from the keyboard
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            //asks for input
-            System.out.println("Enter Command");
-            
-            //gets input from the keyboard and trims off the blanks
-            keyboardInput = keyboard.nextLine();
-            keyboardInput = keyboardInput.trim();
-            //selection = Character.toUpperCase(selection);
-            
-            //invalid cases
-            if (keyboardInput.length() != 1) {
-                System.out.println("Invalid Input");
-                //repeats
-                continue;
-            }
-            
-            //breaks out of the repetition
-            break;
-        }
-        //return the keyboardInput
-        return keyboardInput;
-        
-    }
-}
-        
+} 
