@@ -13,10 +13,22 @@ import java.util.Scanner;
  *press enter to continue and enter name
  *continue to main menu
  */
-public class StartProgramView{
-    public StartProgramView(){
+public class StartProgramView extends View {
+
+    public StartProgramView(String promptMessage) {
+        super("");
     }
-    public void startProgram(){
+
+    /**
+     *
+     */
+    public StartProgramView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
+    @Override
+    public void display(){
         //displays the banner screen
         this.displayBanner();
         
@@ -101,6 +113,11 @@ public class StartProgramView{
         System.out.println("\tWelcome to the game Sergeant " + player.getName());
         System.out.println("\tGo out there and do your country proud!");
         System.out.println("====================================================");
+    }
+
+    @Override
+    public void doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
