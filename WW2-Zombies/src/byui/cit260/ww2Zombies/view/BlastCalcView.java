@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Jonathan
  */
-public class BlastCalcView {
+public class BlastCalcView extends View {
     private int power;
     private int diameter;
     private int heat;
@@ -22,7 +22,8 @@ public class BlastCalcView {
     
     
   
-    private int getInput(){
+   
+    public int getInput(){
         
         Boolean goodInput1 = false;
         Boolean goodInput2 = false;
@@ -102,6 +103,11 @@ public class BlastCalcView {
         double blast = power * diameter *heat;
             return blast;
     } 
+
+    @Override
+    public void doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
    
     
