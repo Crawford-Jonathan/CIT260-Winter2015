@@ -41,8 +41,8 @@ public class WW2Zombies {
     public static void main(String[] args) {
         
         //creates StartProgramView and start the progress
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();
+        StartProgramView display = new StartProgramView();
+        display.display();
         
         /*
         
