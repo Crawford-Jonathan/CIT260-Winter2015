@@ -50,5 +50,10 @@ public class AttackMenuView extends View{
             System.out.println("wait 5 seconds for explosion");
         }
 
+    @Override
+    public void doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     }
 
