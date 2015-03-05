@@ -16,6 +16,7 @@ public class BlastCalcView extends View {
     private int diameter;
     private int heat;
 
+    //Im not sure what the error is, it's pulling the correct types from the view superclass
     public BlastCalcView(String promptMessage) {
         
     }
