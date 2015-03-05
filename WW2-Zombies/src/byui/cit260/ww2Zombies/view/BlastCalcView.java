@@ -17,11 +17,12 @@ public class BlastCalcView extends View {
     private int heat;
 
     public BlastCalcView(String promptMessage) {
-        super(promptMessage);
+        
     }
     
     
-    @Override
+  
+   
     public int getInput(){
         
         Boolean goodInput1 = false;
@@ -107,5 +108,7 @@ public class BlastCalcView extends View {
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
     
 }
