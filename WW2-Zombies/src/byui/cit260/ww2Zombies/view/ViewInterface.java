@@ -13,5 +13,4 @@ public interface ViewInterface {
     public void display();
     public String getInput();
     public boolean doAction(Object obj);
-    //public void doAction(char value);
 }

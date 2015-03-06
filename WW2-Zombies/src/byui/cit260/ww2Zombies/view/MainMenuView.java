@@ -34,8 +34,8 @@ public class MainMenuView extends View {
      * @param choice
      */
     
-    //@Override
-    public void doAction(char choice) {
+    @Override
+    public boolean doAction(char choice) {
         switch (choice) {
             case 'G':
                 this.startNewGame();
@@ -78,8 +78,9 @@ public class MainMenuView extends View {
         System.out.println("save game function called");
     }
 
+    /**
     @Override
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 }

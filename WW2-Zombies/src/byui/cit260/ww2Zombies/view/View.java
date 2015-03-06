@@ -19,24 +19,36 @@ public abstract class View implements ViewInterface {
         this.promptMessage = promptMessage;
     }
 
-    @Override
+    //@Override
     public void display() {
-        String value;
-        //char value;
+        String value = "";
+        boolean done = false;
+        
         do {
             System.out.println(this.promptMessage);
             value = this.getInput();
-            this.doAction(value);
-        } while (!value.equals("Q"));
+            done = this.doAction(value);
+        } while (!done);
     }
 
-    @Override
+    //@Override
     public String getInput() {
 
         boolean valid = false;
         String selection = null;
-        Scanner keyboard = new Scanner(System.in);
+        //Scanner keyboard = new Scanner(System.in);
 
+        try {
+            while (!valid)
+                selection = this.keyboard.readLine();
+                selection = selection.trim();
+                
+                if (selection.length() != 1) {
+                    System.out.println("Invalid Input");
+                }
+                
+        }
+        /**
         while (!valid) {
 
             System.out.println("Enter Command");
@@ -56,7 +68,7 @@ public abstract class View implements ViewInterface {
         return selection;
 
     }
-
+    */
     public String getPromptMessage() {
         return promptMessage;
     }
