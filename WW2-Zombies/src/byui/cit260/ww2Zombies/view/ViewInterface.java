@@ -12,5 +12,6 @@ package byui.cit260.ww2Zombies.view;
 public interface ViewInterface {
     public void display();
     public String getInput();
-    public void doAction(String value);
+    public boolean doAction(Object obj);
+    //public void doAction(char value);
 }

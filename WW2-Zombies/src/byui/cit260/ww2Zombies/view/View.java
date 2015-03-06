@@ -22,6 +22,7 @@ public abstract class View implements ViewInterface {
     @Override
     public void display() {
         String value;
+        //char value;
         do {
             System.out.println(this.promptMessage);
             value = this.getInput();

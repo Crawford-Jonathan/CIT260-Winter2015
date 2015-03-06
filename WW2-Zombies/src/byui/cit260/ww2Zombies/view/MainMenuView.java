@@ -34,6 +34,7 @@ public class MainMenuView extends View {
      * @param choice
      */
     
+    //@Override
     public void doAction(char choice) {
         switch (choice) {
             case 'G':
