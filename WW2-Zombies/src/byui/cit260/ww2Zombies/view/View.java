@@ -23,7 +23,7 @@ public abstract class View implements ViewInterface {
     public void display() {
         String value = "";
         boolean done = false;
-        
+
         do {
             System.out.println(this.promptMessage);
             value = this.getInput();
@@ -39,36 +39,33 @@ public abstract class View implements ViewInterface {
         //Scanner keyboard = new Scanner(System.in);
 
         try {
-            while (!valid)
+            while (!valid) {
                 selection = this.keyboard.readLine();
-                selection = selection.trim();
-                
-                if (selection.length() < 1) {
-                    System.out.println("You must enter a value.");
-                }
-                
-        }
-        /**
-        while (!valid) {
-
-            System.out.println("Enter Command");
-
-            selection = keyboard.nextLine();
+            }
             selection = selection.trim();
 
-            if (selection.length() != 1) {
-                System.out.println("Invalid Input");
-
-                continue;
+            if (selection.length() < 1) {
+                System.out.println("You must enter a value.");
             }
 
-            break;
         }
-
-        return selection;
-
-    }
-    */
+        /**
+         * while (!valid) {
+         *
+         * System.out.println("Enter Command");
+         *
+         * selection = keyboard.nextLine(); selection = selection.trim();
+         *
+         * if (selection.length() != 1) { System.out.println("Invalid Input");
+         *
+         * continue; }
+         *
+         * break; }
+         *
+         * return selection;
+         *
+         * }
+         */
     public String getPromptMessage() {
         return promptMessage;
     }
@@ -77,4 +74,5 @@ public abstract class View implements ViewInterface {
         this.promptMessage = promptMessage;
     }
 
+}
 }
