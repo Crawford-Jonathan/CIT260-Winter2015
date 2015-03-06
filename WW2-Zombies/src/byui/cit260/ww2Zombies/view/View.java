@@ -36,9 +36,9 @@ public abstract class View implements ViewInterface {
 
         boolean valid = false;
         String selection = null;
-        //Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
-        try {
+        
             while (!valid) {
                 selection = this.keyboard.readLine();
             }
@@ -47,8 +47,8 @@ public abstract class View implements ViewInterface {
             if (selection.length() < 1) {
                 System.out.println("You must enter a value.");
             }
-
-        }
+        
+        
         /**
          * while (!valid) {
          *
