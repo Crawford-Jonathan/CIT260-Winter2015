@@ -43,8 +43,8 @@ public abstract class View implements ViewInterface {
                 selection = this.keyboard.readLine();
                 selection = selection.trim();
                 
-                if (selection.length() != 1) {
-                    System.out.println("Invalid Input");
+                if (selection.length() < 1) {
+                    System.out.println("You must enter a value.");
                 }
                 
         }
