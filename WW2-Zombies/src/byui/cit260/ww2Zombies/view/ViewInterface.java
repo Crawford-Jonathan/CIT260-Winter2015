@@ -10,7 +10,10 @@ package byui.cit260.ww2Zombies.view;
  * @author Jonathan
  */
 public interface ViewInterface {
+
     public void display();
+
     public String getInput();
+
     public boolean doAction(Object obj);
 }

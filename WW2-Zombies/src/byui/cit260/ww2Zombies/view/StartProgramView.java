@@ -9,11 +9,11 @@ import byui.cit260.ww2Zombies.control.ProgramControl;
 import byui.cit260.ww2Zombies.model.Player;
 import java.util.Scanner;
 
-/**display title screen / banner
- *press enter to continue and enter name
- *continue to main menu
+/**
+ * display title screen / banner press enter to continue and enter name continue
+ * to main menu
  */
-public class StartProgramView extends View {
+public abstract class StartProgramView extends View {
 
     public StartProgramView(String promptMessage) {
         super("");
@@ -22,32 +22,37 @@ public class StartProgramView extends View {
     /**
      *
      */
-    
-  
     @Override
-    public void display(){
+    public void display() {
         //displays the banner screen
         this.displayBanner();
-        
+
         //get the Player name
         String playersName = this.getPlayersName();
-        
+
         //create and save the player object
         Player player = ProgramControl.createPlayer(playersName);
-        
+
         //displays the welcome message
         this.displayWelcomeMessage(player);
-        
+
         //display Main Menu
-        MainMenuView mainMenu = new MainMenuView();
+        MainMenuView mainMenu = new MainMenuView() {
+
+            @Override
+            public boolean doAction(Object obj) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         mainMenu.display();
     }
+
     private void displayBanner() {
         System.out.println(
                 "\n\n*********************************************************"
         );
         System.out.println(
-                    "*                                                       *"
+                "*                                                       *"
                 + "\n*              Welcome to the Jungle                    *"
                 + "\n*              Congradulations Soldier!                 *"
                 + "\n*     You have been selected for a special mission.     *"
@@ -55,12 +60,12 @@ public class StartProgramView extends View {
                 + "\n*                                                       *"
         );
         System.out.println(
-                    "*                                                       *"
+                "*                                                       *"
                 + "\n*                     Your Mission:                     *"
                 + "\n*            There have been reports from M.I.          *"
                 + "\n*          suggesting that a previously uninhabited     *"
                 + "\n*         island by Japan has been occupied by          *"
-                + "\n*         the Germans. You are to go to this island     *"                
+                + "\n*         the Germans. You are to go to this island     *"
                 + "\n*        and find out what they are doing there and     *"
                 + "\n*          disrupt their operations. You and your       *"
                 + "\n*           fire-team will be air-dropped in 0400.      *"
@@ -70,10 +75,10 @@ public class StartProgramView extends View {
                 + "\n*                                                       *"
         );
         System.out.println(
-                  "***********************************************************"
+                "***********************************************************"
         );
     }
-    
+
     //get the Player name, if new name than create new Player account
     public String getPlayersName() {
         //indicates if player name has been retreived
@@ -81,29 +86,29 @@ public class StartProgramView extends View {
         String playersName = null;
         //gets input from the keyboard
         Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
+
+        while (!valid) {
             //asks for players name
             System.out.println("Enter the player's name below");
-            
+
             //gets name from the keyboard and trims off the blanks
             playersName = keyboard.nextLine();
             playersName = playersName.trim();
-            
+
             //invalid cases
             if (playersName.length() < 2) {
                 System.out.println("Invalid name - name must be longer than 2 characters");
                 //repeats
                 continue;
             }
-            
+
             //breaks out of the repetition
             break;
         }
         //return the playersNAme
         return playersName;
-        
-        }
+
+    }
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n================================================");
@@ -112,12 +117,9 @@ public class StartProgramView extends View {
         System.out.println("====================================================");
     }
 
-    @Override
+    //@Override
     public boolean doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
-    
 }

@@ -14,19 +14,20 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     private String promptMessage;
-    public View(String promptMessage){
+
+    public View(String promptMessage) {
         this.promptMessage = promptMessage;
     }
-    
+
     @Override
     public void display() {
         String value;
-        
+
         do {
             System.out.println(this.promptMessage);
             value = this.getInput();
             this.doAction(value);
-        }while(!value.equals("Q"));
+        } while (!value.equals("Q"));
     }
 
     @Override
@@ -36,10 +37,9 @@ public abstract class View implements ViewInterface {
         String selection = null;
         Scanner keyboard = new Scanner(System.in);
 
-        
-            while (!valid) {
+        while (!valid) {
             System.out.println("\t\nEnter your selection:");
-            
+
             selection = keyboard.nextLine();
             selection = selection.trim();
 
@@ -48,26 +48,27 @@ public abstract class View implements ViewInterface {
                 continue;
             }
             break;
-            }
+        }
         return selection;
     }
-        /**
-         * while (!valid) {
-         *
-         * System.out.println("Enter Command");
-         *
-         * selection = keyboard.nextLine(); selection = selection.trim();
-         *
-         * if (selection.length() != 1) { System.out.println("Invalid Input");
-         *
-         * continue; }
-         *
-         * break; }
-         *
-         * return selection;
-         *
-         * }
-         */
+
+    /**
+     * while (!valid) {
+     *
+     * System.out.println("Enter Command");
+     *
+     * selection = keyboard.nextLine(); selection = selection.trim();
+     *
+     * if (selection.length() != 1) { System.out.println("Invalid Input");
+     *
+     * continue; }
+     *
+     * break; }
+     *
+     * return selection;
+     *
+     * }
+     */
     public String getPromptMessage() {
         return promptMessage;
     }
@@ -77,4 +78,3 @@ public abstract class View implements ViewInterface {
     }
 
 }
-
