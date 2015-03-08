@@ -16,17 +16,16 @@ public abstract class View implements ViewInterface {
     private String promptMessage;
     @Override
     public void display() {
-        String value = "";
-        boolean done = false;
-
+        String value;
+        
         do {
             System.out.println(this.promptMessage);
             value = this.getInput();
-            done = this.doAction(value);
-        } while (!done);
+            this.doAction(value);
+        }while(!value.equals("Q"));
     }
 
-    //@Override
+    @Override
     public String getInput() {
 
         boolean valid = false;
@@ -35,15 +34,19 @@ public abstract class View implements ViewInterface {
 
         
             while (!valid) {
-                selection = this.keyboard.readLine();
-            }
+            System.out.println("\t\nEnter your selection:");
+            
+            selection = keyboard.nextLine();
             selection = selection.trim();
 
             if (selection.length() < 1) {
                 System.out.println("You must enter a value.");
+                continue;
             }
-        
-        
+            break;
+            }
+        return selection;
+    }
         /**
          * while (!valid) {
          *
@@ -70,4 +73,4 @@ public abstract class View implements ViewInterface {
     }
 
 }
-}
+
