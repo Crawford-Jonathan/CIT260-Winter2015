@@ -13,23 +13,24 @@ import java.util.Scanner;
  *
  * @author Jonathan
  */
-public class InventoryMenuView extends View {
- public InventoryMenuView(){
-    super( "\n"
-            +"\n-------------------------------------"
-            +"\n| Inventory Menu                    |"
-            +"\n-------------------------------------"
-            +"\nP - Pick up Item"
-            +"\nD - Drop Item"
-            +"\nU - Use Item"
-            +"\nE - Equip Item"
-            +"\nM - Veiw Map"
-            +"\nR - Return to Previous Menu"
-            +"\n-------------------------------------");
-}
-    
-    private void doAction(char choice){
-        switch (choice){
+public abstract class InventoryMenuView extends View {
+
+    public InventoryMenuView() {
+        super("\n"
+                + "\n-------------------------------------"
+                + "\n| Inventory Menu                    |"
+                + "\n-------------------------------------"
+                + "\nP - Pick up Item"
+                + "\nD - Drop Item"
+                + "\nU - Use Item"
+                + "\nE - Equip Item"
+                + "\nM - Veiw Map"
+                + "\nR - Return to Previous Menu"
+                + "\n-------------------------------------");
+    }
+
+    private void doAction(char choice) {
+        switch (choice) {
             case 'P':
                 this.pickUpItem();
                 break;
@@ -52,26 +53,30 @@ public class InventoryMenuView extends View {
                 break;
         }
     }
-        private void pickUpItem(){
-            System.out.println("Picks up item.");
-            //UpgradeCarrySpace gameMenu = new UpgradeCarrySpace();
-            //gameMenu.displayMenu();
-        }
-        private void dropItem(){
-            System.out.println("Drops item on the ground.");
-        }
-        private void useItem(){
-            System.out.println("Uses item.");
-        }
-        private void equipItem(){
-            System.out.println("Equips Item.");
-        }
-        private void viewMap(){
-            System.out.println("Looks at map.");
-        }
-    
 
-    @Override
+    private void pickUpItem() {
+        System.out.println("Picks up item.");
+            //UpgradeCarrySpace gameMenu = new UpgradeCarrySpace();
+        //gameMenu.displayMenu();
+    }
+
+    private void dropItem() {
+        System.out.println("Drops item on the ground.");
+    }
+
+    private void useItem() {
+        System.out.println("Uses item.");
+    }
+
+    private void equipItem() {
+        System.out.println("Equips Item.");
+    }
+
+    private void viewMap() {
+        System.out.println("Looks at map.");
+    }
+
+    //@Override
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

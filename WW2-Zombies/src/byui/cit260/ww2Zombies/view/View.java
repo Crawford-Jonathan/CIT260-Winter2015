@@ -22,14 +22,13 @@ public abstract class View implements ViewInterface {
     @Override
     public void display() {
         String value;
-                
+
         do {
             
             System.out.println(this.promptMessage);
             value = this.getInput();
             this.doAction(value);
-            
-        } while (!value.equals("E"));
+        } while (!value.equals("Q"));
     }
 
     @Override
@@ -38,27 +37,40 @@ public abstract class View implements ViewInterface {
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String selection = null;
+        Scanner keyboard = new Scanner(System.in);
 
         while (!valid) {
-
-            System.out.println("Enter Command");
+            System.out.println("\t\nEnter your selection:");
 
             selection = keyboard.nextLine();
             selection = selection.trim();
 
-            if (selection.length() != 1) {
-                System.out.println("Invalid Input");
-
+            if (selection.length() < 1) {
+                System.out.println("You must enter a value.");
                 continue;
             }
-
             break;
         }
-
         return selection;
-
     }
-    
+
+    /**
+     * while (!valid) {
+     *
+     * System.out.println("Enter Command");
+     *
+     * selection = keyboard.nextLine(); selection = selection.trim();
+     *
+     * if (selection.length() != 1) { System.out.println("Invalid Input");
+     *
+     * continue; }
+     *
+     * break; }
+     *
+     * return selection;
+     *
+     * }
+     */
     public String getPromptMessage() {
         return promptMessage;
     }

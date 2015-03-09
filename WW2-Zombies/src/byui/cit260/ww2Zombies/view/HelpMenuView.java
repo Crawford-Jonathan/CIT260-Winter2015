@@ -11,24 +11,23 @@ import java.util.Scanner;
  *
  * @author SilentMan
  */
-public class HelpMenuView extends View{
-    
+public abstract class HelpMenuView extends View {
+
     public HelpMenuView() {
-    super("\n"
-            + "\n--------------------------------"
-            + "\n| Help Menu                    |"
-            + "\n--------------------------------"
-            + "\nD - Game Description"
-            + "\nL - Look Around"
-            //+ "\nW - Move North"
-            //+ "\nS - Move South"
-            //+ "\nA - Move East"
-            //+ "\nD - Move West"
-            + "\nM - View Map"
-            + "\nV - View Inventory"
-            
-            + "\nR - Return to Previous Menu"
-            + "\n--------------------------------");
+        super("\n"
+                + "\n--------------------------------"
+                + "\n| Help Menu                    |"
+                + "\n--------------------------------"
+                + "\nD - Game Description"
+                + "\nL - Look Around"
+                //+ "\nW - Move North"
+                //+ "\nS - Move South"
+                //+ "\nA - Move East"
+                //+ "\nD - Move West"
+                + "\nM - View Map"
+                + "\nV - View Inventory"
+                + "\nR - Return to Previous Menu"
+                + "\n--------------------------------");
     }
 
     private void doAction(char choice) {
@@ -45,7 +44,7 @@ public class HelpMenuView extends View{
             case 'V':
                 this.viewInventory();
                 break;
-            
+
             case 'R':
                 return;
             default:
@@ -53,26 +52,26 @@ public class HelpMenuView extends View{
                 break;
         }
     }
-    
-        private void gameDescription() {
-            System.out.println("place game description here");
-        }
-        
-        private void lookAround() {
-            System.out.println("you see stuff");
-        }
-        
-        private void viewMap() {
-            System.out.println("shows the map");
-        }
-        
-        private void viewInventory() {
-            System.out.println("view your stuff");
-        }
 
-    @Override
+    private void gameDescription() {
+        System.out.println("place game description here");
+    }
+
+    private void lookAround() {
+        System.out.println("you see stuff");
+    }
+
+    private void viewMap() {
+        System.out.println("shows the map");
+    }
+
+    private void viewInventory() {
+        System.out.println("view your stuff");
+    }
+
+    //@Override
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-        
-} 
+
+}

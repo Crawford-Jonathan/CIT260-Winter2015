@@ -14,7 +14,7 @@ import ww2.zombies.main.WW2Zombies;
  *
  * @author SilentMan
  */
-public class MainMenuView extends View {
+public abstract class MainMenuView extends View {
 
     public MainMenuView() {
         super("\n"
@@ -33,8 +33,7 @@ public class MainMenuView extends View {
      *
      * @param choice
      */
-    
-    @Override
+    //@Override
     public boolean doAction(char choice) {
         switch (choice) {
             case 'G':
@@ -55,6 +54,7 @@ public class MainMenuView extends View {
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
                 break;
         }
+        return;
     }
 
     private void startNewGame() {
@@ -70,7 +70,13 @@ public class MainMenuView extends View {
     }
 
     private void helpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView() {
+
+            @Override
+            public boolean doAction(Object obj) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         helpMenu.display();
     }
 
@@ -78,9 +84,8 @@ public class MainMenuView extends View {
         System.out.println("save game function called");
     }
 
-    /**
-    @Override
+    //@Override
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
+    }
 }
