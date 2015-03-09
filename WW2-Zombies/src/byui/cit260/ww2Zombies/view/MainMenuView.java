@@ -70,7 +70,13 @@ public abstract class MainMenuView extends View {
     }
 
     private void helpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView() {
+
+            @Override
+            public boolean doAction(Object obj) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         helpMenu.display();
     }
 
