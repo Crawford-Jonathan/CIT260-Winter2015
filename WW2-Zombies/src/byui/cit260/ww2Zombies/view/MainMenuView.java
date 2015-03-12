@@ -34,7 +34,7 @@ public abstract class MainMenuView extends View {
      * @param choice
      */
     //@Override
-    public char doAction(char choice) {
+    public void doAction(char choice) {
         switch (choice) {
             case 'G':
                 this.startNewGame();
@@ -56,7 +56,7 @@ public abstract class MainMenuView extends View {
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
                 break;
         }
-        return choice;
+        //return choice;
     }
 
     private void startNewGame() {
