@@ -47,4 +47,8 @@ public class GameControl {
         
     }
     
+    public static Inventory[] createInventoryList() {
+        System.out.println("called createInventoryList() in GameControl");
+        return null;
+    }
 }
