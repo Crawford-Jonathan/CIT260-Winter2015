@@ -15,6 +15,12 @@ import java.util.Objects;
 public class Game implements Serializable{
    
     //constructor
+    private Bomb bomb;
+    private Inventory[] inventory;
+    private Map map;
+    private Player player;
+    private Enemies enemies;
+    
     public Game(String name) {
         this.name = name;
     }

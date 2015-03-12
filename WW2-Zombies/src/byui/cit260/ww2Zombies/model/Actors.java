@@ -50,6 +50,7 @@ public enum Actors implements Serializable {
     public Point getCoordinates() {
         return coordinates;
     }
+
     //Hashcode
 /**
     @Override
