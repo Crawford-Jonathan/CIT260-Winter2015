@@ -39,7 +39,6 @@ public class Game implements Serializable{
         this.name = name;
     }
     
-
     public Bomb getBomb() {
         return bomb;
     }

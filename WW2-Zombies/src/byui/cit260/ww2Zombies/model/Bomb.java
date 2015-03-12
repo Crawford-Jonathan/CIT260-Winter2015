@@ -9,6 +9,6 @@ package byui.cit260.ww2Zombies.model;
  *
  * @author SilentMan
  */
-class Bomb {
+public class Bomb {
     
 }

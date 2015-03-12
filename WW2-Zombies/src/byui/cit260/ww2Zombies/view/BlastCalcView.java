@@ -22,8 +22,7 @@ public abstract class BlastCalcView extends View {
 
     }
 
-    //@Override
-    public int getInput() {
+    public int getCalc() {
 
         Boolean goodInput1 = false;
         Boolean goodInput2 = false;
@@ -35,7 +34,7 @@ public abstract class BlastCalcView extends View {
 
         while (goodInput1 == false) {
             //get input from command line
-            inputPower = this.getInput();//get users selection
+            inputPower = this.getCalc();//get users selection
 
             if (inputPower > 19 && inputPower < 61) {
                 goodInput1 = true;
@@ -44,7 +43,7 @@ public abstract class BlastCalcView extends View {
         }
         while (goodInput2 == false) {
             //get input from command line
-            inputDiameter = this.getInput();//get users selection
+            inputDiameter = this.getCalc();//get users selection
 
             if (inputDiameter > 19 && inputDiameter < 61) {
                 goodInput2 = true;
@@ -52,7 +51,7 @@ public abstract class BlastCalcView extends View {
         }
         while (goodInput3 == false) {
             //get input from command line
-            inputHeat = this.getInput();//get users selection
+            inputHeat = this.getCalc();//get users selection
 
             if (inputHeat > 19 && inputHeat < 61) {
                 goodInput3 = true;
