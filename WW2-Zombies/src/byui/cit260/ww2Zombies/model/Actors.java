@@ -12,24 +12,28 @@ import java.util.Objects;
  *
  * @author Jonathan
  */
-public class Actors implements Serializable{
+//public class Actors implements Serializable{
+public enum Actors implements Serializable {
 
-    //private setCharName(){};
-    //private setCharType(){};
-    //private setCharDescript(){};
-//constructor
-    public Actors(String name) {
-        this.name = name;
+    FireTeamLeader("leading the team to victory!"),
+    Rifleman("extra firepower is always welcome"),
+    autoRifleman("bullet hose"),
+    Grendier("making things go BOOM since 1943");
+
+    //Class instance variable
+    //private String name;
+    private final String description;
+    private final Point coordinates;
+    
+    //public Actors(){
+    //};
+    //constructor class
+    Actors(String description) {
+        this.description = description;
+        coordinates = new Point(1,1);
     }
-    
-    
-    
-//Class instance variable
-    private String name;
-    public Actors(){
-    };
     //Getter and Setter
-
+/**
     public String getName() {
         return name;
     }
@@ -37,17 +41,26 @@ public class Actors implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-    //Hashcode
+*/
 
+    public String getDescription() {
+        return description;
+    }
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
+    //Hashcode
+/**
     @Override
-    public int hashCode() {
+        public int hashCode() {
         int hash = 7;
         hash = 67 * hash + Objects.hashCode(this.name);
         return hash;
     }
     //Equals
     @Override
-    public boolean equals(Object obj) {
+        public boolean equals(Object obj) {
         if (obj == null) {
             return false;
         }
@@ -61,11 +74,11 @@ public class Actors implements Serializable{
         return true;
     }
     //toString
-
+    
     @Override
-    public String toString() {
+        public String toString() {
         return "Actors{" + "name=" + name + '}';
     }
-    
+*/
     
 }
