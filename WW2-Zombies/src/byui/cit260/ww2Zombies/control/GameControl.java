@@ -12,6 +12,7 @@ import byui.cit260.ww2Zombies.model.Player;
 import ww2.zombies.main.WW2Zombies;
 import byui.cit260.ww2Zombies.model.Inventory;
 import byui.cit260.ww2Zombies.model.Map;
+//import byui.cit260.ww2Zombies.control.MapControl;
 
 /**
  *

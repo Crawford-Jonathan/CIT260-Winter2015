@@ -18,9 +18,10 @@ public class MapControl {
         return null;
     }
     
-    public static void movedActorsToStartingLocation(Map map) {
-        System.out.println(" called moveActorsToStartingLocation() ");
+    public static void moveActorsToStartingLocation(Map map) {
+        System.out.println(" called moveActorsToStartingLocation from map control ");
     }
+
 
     private static class MapControlException extends Exception {
 
