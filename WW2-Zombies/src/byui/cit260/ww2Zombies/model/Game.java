@@ -15,11 +15,11 @@ import java.util.Objects;
 public class Game implements Serializable{
    
     //constructor
-    private Bomb bomb;
     private Inventory[] inventory;
     private Map map;
     private Player player;
     private Enemies enemies;
+    private Bomb bomb;
     
     public Game(String name) {
         this.name = name;
@@ -30,7 +30,6 @@ public class Game implements Serializable{
     public Game(){
     };
     
-    
     // Getter and Setter
      public String getName() {
         return name;
@@ -39,6 +38,49 @@ public class Game implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+    
+
+    public Bomb getBomb() {
+        return bomb;
+    }
+
+    public void setBomb(Bomb bomb) {
+        this.bomb = bomb;
+    }
+
+    public Inventory[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory[] inventory) {
+        this.inventory = inventory;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Enemies getEnemies() {
+        return enemies;
+    }
+
+    public void setEnemies(Enemies enemies) {
+        this.enemies = enemies;
+    }
+    
+    
     //Hashcode
      @Override
     public int hashCode() {

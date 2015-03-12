@@ -34,7 +34,7 @@ public abstract class MainMenuView extends View {
      * @param choice
      */
     //@Override
-    public boolean doAction(char choice) {
+    public char doAction(char choice) {
         switch (choice) {
             case 'G':
                 this.startNewGame();
@@ -49,12 +49,14 @@ public abstract class MainMenuView extends View {
                 this.saveCurrentGame();
                 break;
             case 'E':
-                return;
+                //return;
+                this.exitGame();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
                 break;
         }
-        return;
+        return choice;
     }
 
     private void startNewGame() {
@@ -83,9 +85,14 @@ public abstract class MainMenuView extends View {
     private void saveCurrentGame() {
         System.out.println("save game function called");
     }
-
+    
+    private void exitGame() {
+        System.out.println("exit the game function");
+    }
     //@Override
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 }
