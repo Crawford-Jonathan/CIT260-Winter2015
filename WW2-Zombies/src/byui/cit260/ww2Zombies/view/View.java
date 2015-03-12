@@ -37,7 +37,7 @@ public abstract class View implements ViewInterface {
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String selection = null;
-        Scanner keyboard = new Scanner(System.in);
+        //Scanner keyboard = new Scanner(System.in);
 
         while (!valid) {
             System.out.println("\t\nEnter your selection:");

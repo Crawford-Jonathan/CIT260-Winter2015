@@ -5,7 +5,7 @@
  */
 package byui.cit260.ww2Zombies.view;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  * Class is meant to be called from the Room View The Room View has yet to be
