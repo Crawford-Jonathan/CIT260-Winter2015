@@ -14,12 +14,12 @@ import byui.cit260.ww2Zombies.model.Map;
 public class MapControl {
     
     public static Map createMap() throws MapControlException {
-        System.out.println(" called createMap() ");
+        System.out.println(" called createMap from mapControl ");
         return null;
     }
     
     public static void moveActorsToStartingLocation(Map map) {
-        System.out.println(" called moveActorsToStartingLocation from map control ");
+        System.out.println(" called moveActorsToStartingLocation from mapControl ");
     }
 
 
