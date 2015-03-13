@@ -10,5 +10,13 @@ package byui.cit260.ww2Zombies.model;
  * @author SilentMan
  */
 public class Inventory {
+
+    public void setQuantityInStock(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDescription(String medpack) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

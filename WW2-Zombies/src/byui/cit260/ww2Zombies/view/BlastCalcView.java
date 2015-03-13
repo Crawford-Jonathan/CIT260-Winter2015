@@ -20,8 +20,8 @@ public abstract class BlastCalcView extends View {
     //Im not sure what the error is, it's pulling the correct types from the view superclass
     public BlastCalcView(String promptMessage) {
 
+    
     }
-
     public int getCalc() {
 
         Boolean goodInput1 = false;
