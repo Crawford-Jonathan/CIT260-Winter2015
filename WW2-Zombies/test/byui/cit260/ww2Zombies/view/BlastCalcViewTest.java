@@ -33,5 +33,39 @@ public class BlastCalcViewTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getCalc method, of class BlastCalcView.
+     */
+    @Test
+    public void testGetCalc() {
+        System.out.println("getCalc");
+        BlastCalcView instance = null;
+        int expResult = 0;
+        int result = instance.getCalc();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of doAction method, of class BlastCalcView.
+     */
+    @Test
+    public void testDoAction() {
+        System.out.println("doAction");
+        String value = "";
+        BlastCalcView instance = null;
+        instance.doAction(value);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    public class BlastCalcViewImpl extends BlastCalcView {
+
+        public BlastCalcViewImpl() {
+            super("");
+        }
+    }
     
 }
