@@ -5,6 +5,7 @@
  */
 package byui.cit260.ww2Zombies.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
