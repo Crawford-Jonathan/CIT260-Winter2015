@@ -20,7 +20,7 @@ import byui.cit260.ww2Zombies.model.Map;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) throws MapControl.MapControlException {
+    public static void createNewGame(Player player) {
         //System.out.println("createNewGame in GameControl called");
         
         //create new game
