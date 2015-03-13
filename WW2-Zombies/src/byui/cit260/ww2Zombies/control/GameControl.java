@@ -11,9 +11,7 @@ import byui.cit260.ww2Zombies.model.Game;
 import byui.cit260.ww2Zombies.model.Player;
 import ww2.zombies.main.WW2Zombies;
 import byui.cit260.ww2Zombies.model.Inventory;
-import byui.cit260.ww2Zombies.model.Inventory.Item;
 import byui.cit260.ww2Zombies.model.Map;
-//import javax.swing.SpringLayout.Constraints;
 //import byui.cit260.ww2Zombies.control.MapControl;
 
 /**
@@ -22,7 +20,7 @@ import byui.cit260.ww2Zombies.model.Map;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) throws MapControl.MapControlException {
+    public static void createNewGame(Player player) {
         //System.out.println("createNewGame in GameControl called");
         
         //create new game
@@ -55,32 +53,32 @@ public class GameControl {
         //return null;
         
         //sets inventory size
-        Inventory[] inventory = new Inventory[Constraints.NUMBER_OF_INVENTORY_ITEMS];
+        Inventory[] inventory = new Inventory[5];
         
         Inventory medpack = new Inventory();
         medpack.setDescription("Medpack");
         medpack.setQuantityInStock(0);
-        inventory[Item.medpack.ordinal()] = medpack;
+        inventory[0] = medpack;
         
         Inventory ammo = new Inventory();
         ammo.setDescription("Ammunition");
         ammo.setQuantityInStock(0);
-        inventory[Item.ammo.ordinal()] = ammo;
+        inventory[1] = ammo;
         
         Inventory grenade = new Inventory();
         grenade.setDescription("Grenade");
         grenade.setQuantityInStock(0);
-        inventory[Item.grenade.ordinal()] = grenade;
+        inventory[2] = grenade;
         
         Inventory hideoutKey = new Inventory();
         hideoutKey.setDescription("Key to the Enemy Base");
         hideoutKey.setQuantityInStock(0);
-        inventory[Item.hideoutKey.ordinal()] = hideoutKey;
+        inventory[3] = hideoutKey;
         
         Inventory bombParts = new Inventory();
         bombParts.setDescription("Material to build a bomb");
         bombParts.setQuantityInStock(0);
-        inventory[Item.bombParts.ordinal()] = bombParts;
+        inventory[4] = bombParts;
         
         return inventory;
     }

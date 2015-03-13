@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.ww2Zombies.model;
+//package byui.cit260.ww2Zombies.model;
 
-import java.io.Serializable;
-import java.util.Objects;
+//import java.io.Serializable;
+//import java.util.Objects;
 
 /**
  *
  * @author SilentMan
  */
-public class Animals {
+/*public class Animals {
     
     private String pheasent;
     private String monkey;
@@ -87,3 +87,4 @@ public class Animals {
     
     
 }
+*/

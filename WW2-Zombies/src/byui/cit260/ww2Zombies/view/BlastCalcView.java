@@ -13,15 +13,21 @@ import java.util.Scanner;
  */
 public abstract class BlastCalcView extends View {
 
+    public BlastCalcView(String promptMessage) {
+        super(promptMessage);
+    }
+
     //private int power;
     //private int diameter;
     //private int heat;
 
     //Im not sure what the error is, it's pulling the correct types from the view superclass
-    public BlastCalcView(String promptMessage) {
 
-    
-    }
+    /**
+     *
+     * @param promptMessage
+     */
+
     public int getCalc() {
 
         Boolean goodInput1 = false;
