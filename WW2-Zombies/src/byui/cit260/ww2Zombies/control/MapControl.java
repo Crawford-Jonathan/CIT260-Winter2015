@@ -23,7 +23,7 @@ public class MapControl {
     }
 
 
-    private static class MapControlException extends Exception {
+    public static class MapControlException extends Exception {
 
         public MapControlException() {
         }
