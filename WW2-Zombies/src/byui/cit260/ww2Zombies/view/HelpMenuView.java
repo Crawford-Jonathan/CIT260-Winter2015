@@ -66,7 +66,18 @@ public abstract class HelpMenuView extends View {
     }
 
     private void viewInventory() {
-        System.out.println("view your stuff");
+        //System.out.println("view your stuff");
+        Inventory[]  inventory = GameControl.getSortedInventoryList();
+        
+        System.out.println("\nList of Inventory Items");
+        System.out.println("Description" + "\t" + "Required" + "\t" + "In Stock");
+        
+        //for each inventory item
+        for (Inventory inventoryItem : inventory) {
+            System.out.println(inventoryItem.getDescription() + "\t  " + 
+                    inventoryItem.getRequiredAmount() + "\t  " + 
+                    inventoryItem.getQuantityInStock());
+        }
     }
 
     //@Override
