@@ -6,6 +6,7 @@
 package byui.cit260.ww2Zombies.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -21,6 +22,7 @@ public class Locations implements Serializable{
     private String weapons;
     private double locationRowCount;
     private double locationColumnCount;
+    private ArrayList<Actors> actors;
 
     //constructor
     public Locations() {
@@ -74,6 +76,14 @@ public class Locations implements Serializable{
     public void setLocationColumnCount(double locationColumnCount) {
         this.locationColumnCount = locationColumnCount;
     }
+    
+    public ArrayList<Actors> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actors> actors) {
+        this.actors = actors;
+    }
 
     //toString
     @Override
@@ -122,6 +132,14 @@ public class Locations implements Serializable{
             return false;
         }
         return true;
+    }
+
+    void setCount(int column) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setRow(int row) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

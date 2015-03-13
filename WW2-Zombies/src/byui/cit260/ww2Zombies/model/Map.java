@@ -17,11 +17,41 @@ public class Map  implements Serializable{
     private double rowCount;
     private double columnCount;
     private double areaDiscovered;
+    private Locations[][] locations;
 
     //constructor
     public Map() {
     }
     
+    public Map(int rowCount, int columnCount) {
+        
+        if (rowCount < 1 || columnCount < 1) {
+            System.out.println("0 rows/columns isn't a map");
+            return;
+        }
+        
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+        
+        //create 2D array for Locations objects
+        this.locations = new Locations[rowCount][columnCount];
+        
+        for (int row = 0; row < rowCount; row++) {
+            for (int column = 0; column < columnCount; column++) {
+                Locations locations = new Locations();
+                locations.setCount(column);
+                locations.setRow(row);
+                //locations.setVisited(false);
+                
+                locations[row][column] = locations;
+            }
+        }
+    }
+
+    //public Map(int i, int i0) {
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
+
     //getter and setter functions
     public double getRowCount() {
         return rowCount;
@@ -45,6 +75,14 @@ public class Map  implements Serializable{
 
     public void setAreaDiscovered(double areaDiscovered) {
         this.areaDiscovered = areaDiscovered;
+    }
+    
+    public Locations[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Locations[][] locations) {
+        this.locations = locations;
     }
     
     //toString()

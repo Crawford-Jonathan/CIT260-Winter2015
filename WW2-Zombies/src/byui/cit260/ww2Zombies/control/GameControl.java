@@ -11,6 +11,8 @@ import byui.cit260.ww2Zombies.model.Game;
 import byui.cit260.ww2Zombies.model.Player;
 import ww2.zombies.main.WW2Zombies;
 import byui.cit260.ww2Zombies.model.Inventory;
+import byui.cit260.ww2Zombies.model.Inventory.Item;
+import byui.cit260.ww2Zombies.model.Locations;
 import byui.cit260.ww2Zombies.model.Map;
 //import byui.cit260.ww2Zombies.control.MapControl;
 
@@ -52,34 +54,40 @@ public class GameControl {
         //System.out.println("called createInventoryList() in GameControl");
         //return null;
         
+        
+        
         //sets inventory size
-        Inventory[] inventory = new Inventory[5];
+        Inventory[] inventory = new Inventory[Constants.NUMBER_OF_INVENTORY_ITEMS];
         
         Inventory medpack = new Inventory();
         medpack.setDescription("Medpack");
         medpack.setQuantityInStock(0);
-        inventory[0] = medpack;
+        inventory[Item.medpack.ordinal()] = medpack;
         
         Inventory ammo = new Inventory();
         ammo.setDescription("Ammunition");
         ammo.setQuantityInStock(0);
-        inventory[1] = ammo;
+        inventory[Item.ammo.ordinal()] = ammo;
         
         Inventory grenade = new Inventory();
         grenade.setDescription("Grenade");
         grenade.setQuantityInStock(0);
-        inventory[2] = grenade;
+        inventory[Item.grenade.ordinal()] = grenade;
         
         Inventory hideoutKey = new Inventory();
         hideoutKey.setDescription("Key to the Enemy Base");
         hideoutKey.setQuantityInStock(0);
-        inventory[3] = hideoutKey;
+        inventory[Item.hideoutKey.ordinal()] = hideoutKey;
         
         Inventory bombParts = new Inventory();
         bombParts.setDescription("Material to build a bomb");
         bombParts.setQuantityInStock(0);
-        inventory[4] = bombParts;
+        inventory[Item.bombParts.ordinal()] = bombParts;
         
         return inventory;
+    }
+
+    static void assignLocationsToMap(Map map, Locations[] locations) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
