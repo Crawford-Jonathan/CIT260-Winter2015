@@ -13,7 +13,7 @@ import byui.cit260.ww2Zombies.model.Map;
  */
 public class MapControl {
     
-    public static Map createMap() throws MapControlException {
+    public static Map createMap() {
         System.out.println(" called createMap from mapControl ");
         return null;
     }
@@ -23,9 +23,5 @@ public class MapControl {
     }
 
 
-    public static class MapControlException extends Exception {
-
-        public MapControlException() {
-        }
-    }
+    
 }
