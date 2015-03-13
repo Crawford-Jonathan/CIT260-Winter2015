@@ -18,6 +18,25 @@ public class Inventory {
     public void setDescription(String medpack) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public boolean getQuantityInStock() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getRequiredAmount() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getDescription() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    /**
+    public static Inventory[] getSortedInventoryList() {
+        System.out.println(" getSortedInventoryList function called from Inventory");
+        return null;
+    }
+    */
     
     public enum Item {
         medpack, ammo, grenade, hideoutKey, bombParts;

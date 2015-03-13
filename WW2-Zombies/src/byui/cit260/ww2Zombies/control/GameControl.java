@@ -90,4 +90,9 @@ public class GameControl {
     static void assignLocationsToMap(Map map, Locations[] locations) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static Inventory[] getSortedInventoryList() {
+        System.out.println("getSortedInventoryList called from GameControl");
+        return null;
+    }
 }
