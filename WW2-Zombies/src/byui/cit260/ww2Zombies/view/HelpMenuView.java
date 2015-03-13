@@ -32,8 +32,8 @@ public abstract class HelpMenuView extends View {
                 + "\n--------------------------------");
     }
 
-    private void doAction(char choice) {
-        switch (choice) {
+    private void doAction(char selection) {
+        switch (selection) {
             case 'D':
                 this.gameDescription();
                 break;

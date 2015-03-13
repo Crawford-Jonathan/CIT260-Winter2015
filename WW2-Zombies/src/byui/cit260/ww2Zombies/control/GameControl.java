@@ -92,7 +92,27 @@ public class GameControl {
     }
 
     public static Inventory[] getSortedInventoryList() {
-        System.out.println("getSortedInventoryList called from GameControl");
-        return null;
+        //System.out.println("getSortedInventoryList called from GameControl");
+        //return null;
+        
+        //get inventory list for game
+        Inventory[] originalInventoryList = WW2Zombies.getCurrentGame().getInventory();
+        
+        //clones originalList
+        Inventory[] inventoryList = originalInventoryList.clone();
+        
+        //bubblesort by name
+        Inventory tempInventoryItem;
+        for (int i = 0; i < inventoryList.length - 1; i++) {
+            for (int j = 0; j < inventoryList.length - 1 - i; j++) {
+                if (inventoryList[j].getDescription().compareToIgnoreCase(inventoryList[j + 1]
+                    .getDescription()) > 0) {
+                tempInventoryItem = inventoryList[j];
+                inventoryList[j] = inventoryList[j + 1];
+                inventoryList[j + 1] = tempInventoryItem;
+                }
+            }
+        }
+        return inventoryList;
     }
 }
