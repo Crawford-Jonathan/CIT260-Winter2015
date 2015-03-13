@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author Jonathan
  */
 public class BlastCalcViewTest {
-    
+
     public BlastCalcViewTest() {
     }
 
@@ -26,7 +26,13 @@ public class BlastCalcViewTest {
         double power = 50;
         double diameter = 50;
         double heat = 50;
-        BlastCalcView instance = new BlastCalcView();
+        BlastCalcView instance = new BlastCalcView() {
+
+            @Override
+            public boolean doAction(Object obj) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         double expResult = 125000;
         double result = instance.calcBlast(power, diameter, heat);
         assertEquals(expResult, result, 0.0);
@@ -61,11 +67,11 @@ public class BlastCalcViewTest {
         fail("The test case is a prototype.");
     }
 
-    public class BlastCalcViewImpl extends BlastCalcView {
+    public abstract class BlastCalcViewImpl extends BlastCalcView {
 
         public BlastCalcViewImpl() {
             super("");
         }
     }
-    
+
 }
