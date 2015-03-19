@@ -38,7 +38,7 @@ public class Map  implements Serializable{
         
         for (int row = 0; row < rowCount; row++) {
             for (int column = 0; column < columnCount; column++) {
-                Locations locations = new Locations();
+                Locations[][] locations = new Locations[row][column];
                 locations.setCount(column);
                 locations.setRow(row);
                 //locations.setVisited(false);
