@@ -40,15 +40,16 @@ public class WW2Zombies {
 
     public static void main(String[] args) {
         
-        //creates StartProgramView and start the progress
-        StartProgramView display = new StartProgramView("") {
-            try {
-                //startProgramView.display();
-            } catch (Throwable te) {
-                System.out.println(te.getMessage());
-                te.printStackTrace();
-                startProgramView.display();
+        StartProgramView display;
+        display = new StartProgramView("") {
+            try{
+            //startProgramView.display();
             }
+            catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
             @Override
             public boolean doAction(Object obj) {
                 throw new UnsupportedOperationException();
@@ -110,6 +111,16 @@ public class WW2Zombies {
         //character.setActor(4);
         
         */
+    }
+
+    private static class startProgramView {
+
+        private static void display() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public startProgramView() {
+        }
     }
     
 }
