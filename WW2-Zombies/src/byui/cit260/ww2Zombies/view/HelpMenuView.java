@@ -32,23 +32,23 @@ public abstract class HelpMenuView extends View {
                 + "\n--------------------------------");
     }
 
-    //public boolean doAction(String selection) {
-    private void doAction(char selection) {
+    public boolean doAction(String selection) {
+    //private void doAction(char selection) {
         switch (selection) {
-            case 'D':
+            case "D":
                 this.gameDescription();
                 break;
-            case 'L':
+            case "L":
                 this.lookAround();
                 break;
-            case 'M':
+            case "M":
                 this.viewMap();
                 break;
-            case 'V':
+            case "V":
                 this.viewInventory();
                 break;
 
-            case 'R':
+            case "R":
                 return;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
