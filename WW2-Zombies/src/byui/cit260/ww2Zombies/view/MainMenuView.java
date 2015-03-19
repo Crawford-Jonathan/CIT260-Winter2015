@@ -6,8 +6,11 @@
 package byui.cit260.ww2Zombies.view;
 
 import byui.cit260.ww2Zombies.control.GameControl;
+import byui.cit260.ww2Zombies.exceptions.MapControlException;
 import byui.cit260.ww2Zombies.model.GameMenuView;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import ww2.zombies.main.WW2Zombies;
 
 /**
@@ -34,7 +37,7 @@ public abstract class MainMenuView extends View {
      * @param choice
      */
     //@Override
-    public void doAction(char choice) {
+    public void doAction(char choice) throws MapControlException {
         switch (choice) {
             case 'G':
                 this.startNewGame();
@@ -59,7 +62,7 @@ public abstract class MainMenuView extends View {
         //return choice;
     }
 
-    private void startNewGame() {
+    private void startNewGame() throws MapControlException {
         //System.out.println("startNewGame function called");
         GameControl.createNewGame(WW2Zombies.getPlayer());
 
