@@ -42,10 +42,16 @@ public class WW2Zombies {
         
         //creates StartProgramView and start the progress
         StartProgramView display = new StartProgramView("") {
-
+            try {
+                //startProgramView.display();
+            } catch (Throwable te) {
+                System.out.println(te.getMessage());
+                te.printStackTrace();
+                startProgramView.display();
+            }
             @Override
             public boolean doAction(Object obj) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                throw new UnsupportedOperationException();
             }
         };
         display.display();
