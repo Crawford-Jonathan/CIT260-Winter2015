@@ -5,6 +5,7 @@
  */
 package byui.cit260.ww2Zombies.control;
 
+import byui.cit260.ww2Zombies.exceptions.MapControlException;
 import byui.cit260.ww2Zombies.model.Bomb;
 import byui.cit260.ww2Zombies.model.Enemies;
 import byui.cit260.ww2Zombies.model.Game;
@@ -22,7 +23,7 @@ import byui.cit260.ww2Zombies.model.Map;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws MapControlException {
         //System.out.println("createNewGame in GameControl called");
         
         //create new game
