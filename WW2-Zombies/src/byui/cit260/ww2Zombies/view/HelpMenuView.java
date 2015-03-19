@@ -32,6 +32,7 @@ public abstract class HelpMenuView extends View {
                 + "\n--------------------------------");
     }
 
+    //public boolean doAction(String selection) {
     private void doAction(char selection) {
         switch (selection) {
             case 'D':
