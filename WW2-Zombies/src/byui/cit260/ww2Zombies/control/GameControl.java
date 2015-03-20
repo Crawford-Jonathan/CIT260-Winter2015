@@ -13,7 +13,7 @@ import byui.cit260.ww2Zombies.model.Player;
 import ww2.zombies.main.WW2Zombies;
 import byui.cit260.ww2Zombies.model.Inventory;
 import byui.cit260.ww2Zombies.model.Inventory.Item;
-import byui.cit260.ww2Zombies.model.Locations;
+import byui.cit260.ww2Zombies.model.Location;
 import byui.cit260.ww2Zombies.model.Map;
 //import byui.cit260.ww2Zombies.control.MapControl;
 
@@ -88,7 +88,7 @@ public class GameControl {
         return inventory;
     }
 
-    static void assignLocationsToMap(Map map, Locations[] locations) {
+    static void assignLocationsToMap(Map map, Location[] locations) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

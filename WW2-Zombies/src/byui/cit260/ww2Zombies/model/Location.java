@@ -13,23 +13,23 @@ import java.util.Objects;
  *
  * @author SilentMan
  */
-public class Locations implements Serializable{
+public class Location implements Serializable{
     
     //class instance variables
-    private String animals;
-    private String enemies;
-    private String items;
-    private String weapons;
+    public ArrayList<Animals> animals = new ArrayList<>();
+    public ArrayList<Enemies> enemies = new ArrayList<>();
+    public ArrayList<Inventory> items = new ArrayList<>();
+    public ArrayList<Inventory> weapons = new ArrayList<>();
     private double locationRowCount;
     private double locationColumnCount;
     private ArrayList<Actors> actors;
 
     //constructor
-    public Locations() {
+    public Location() {
     }
     
     //getter and setter functions
-    public String getAnimals() {
+    public ArrayList getAnimals() {
         return animals;
     }
 
@@ -37,27 +37,27 @@ public class Locations implements Serializable{
         this.animals = animals;
     }
 
-    public String getEnemies() {
+    public ArrayList getEnemies() {
         return enemies;
     }
 
-    public void setEnemies(String enemies) {
+    public void setEnemies(ArrayList enemies) {
         this.enemies = enemies;
     }
 
-    public String getItems() {
+    public ArrayList getItems() {
         return items;
     }
 
-    public void setItems(String items) {
+    public void setItems(ArrayList items) {
         this.items = items;
     }
 
-    public String getWeapons() {
+    public ArrayList getWeapons() {
         return weapons;
     }
 
-    public void setWeapons(String weapons) {
+    public void setWeapons(ArrayList weapons) {
         this.weapons = weapons;
     }
 
@@ -112,7 +112,7 @@ public class Locations implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Locations other = (Locations) obj;
+        final Location other = (Location) obj;
         if (!Objects.equals(this.animals, other.animals)) {
             return false;
         }

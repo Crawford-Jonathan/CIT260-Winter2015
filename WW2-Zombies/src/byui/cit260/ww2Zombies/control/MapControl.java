@@ -6,11 +6,11 @@
 package byui.cit260.ww2Zombies.control;
 import byui.cit260.ww2Zombies.exceptions.MapControlException;
 import byui.cit260.ww2Zombies.model.Actors;
-import byui.cit260.ww2Zombies.model.Locations;
+import byui.cit260.ww2Zombies.model.Location;
 import byui.cit260.ww2Zombies.model.Map;
 import java.awt.Point;
 import ww2.zombies.main.WW2Zombies;
-//import byui.cit260.ww2Zombies.model.Locations;
+//import byui.cit260.ww2Zombies.model.Location;
 
 /**
  *
@@ -24,7 +24,7 @@ public class MapControl {
         
         Map map = new Map(5,5);
         
-        Locations[] locations = createLocations();
+        Location[] locations = createLocations();
         
         GameControl.assignLocationsToMap(map, locations);
         
@@ -67,7 +67,7 @@ public class MapControl {
         }
     }
 
-    private static Locations[] createLocations() {
+    private static Location[] createLocations() {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     
