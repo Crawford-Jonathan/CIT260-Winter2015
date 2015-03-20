@@ -33,7 +33,7 @@ public class Location implements Serializable{
         return animals;
     }
 
-    public void setAnimals(String animals) {
+    public void setAnimals(ArrayList animals) {
         this.animals = animals;
     }
 
