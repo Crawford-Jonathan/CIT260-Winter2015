@@ -49,11 +49,12 @@ public abstract class HelpMenuView extends View {
                 break;
 
             case "R":
-                return;
+                return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
                 break;
         }
+        return false;
     }
 
     private void gameDescription() {
@@ -84,8 +85,8 @@ public abstract class HelpMenuView extends View {
     }
 
     //@Override
-    public void doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //public void doAction(String value) {
+  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  //  }
 
 }
