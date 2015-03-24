@@ -26,13 +26,8 @@ public class BlastCalcViewTest {
         double power = 50;
         double diameter = 50;
         double heat = 50;
-        BlastCalcView instance = new BlastCalcView() {
-
-            @Override
-            public boolean doAction(Object obj) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
+        BlastCalcView instance;
+        instance = new BlastCalcViewImpl1();
         double expResult = 125000;
         double result = instance.calcBlast(power, diameter, heat);
         assertEquals(expResult, result, 0.0);
@@ -71,6 +66,20 @@ public class BlastCalcViewTest {
 
         public BlastCalcViewImpl() {
             super("");
+        }
+    }
+
+    private static class BlastCalcViewImpl1 extends BlastCalcView {
+
+        public BlastCalcViewImpl1() {
+            super(
+                    
+            );
+        }
+
+        @Override
+        public boolean doAction(Object obj) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
 
