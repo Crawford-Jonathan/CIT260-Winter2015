@@ -12,6 +12,12 @@ import byui.cit260.ww2Zombies.model.Player;
 import byui.cit260.ww2Zombies.model.Game;
 //import byui.cit260.ww2Zombies.model.Locations;
 import byui.cit260.ww2Zombies.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,6 +27,12 @@ public class WW2Zombies {
 
     private static Game currentGame = null;
     private static Player player = null;
+    
+    //PrintWrtier and BufferedREader classes
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -40,7 +52,35 @@ public class WW2Zombies {
 
     public static void main(String[] args) {
         
-
+        try {
+            WW2Zombies.inFile = new BufferedReader(new InputStreamReader(System.in));
+            WW2Zombies.outFile = new PrintWriter(System.out, true);
+        } catch (Exception e) {
+            
+        }
+        /**finally {
+            try {
+                WW2Zombies.inFile.close();
+                WW2Zombies.outFile.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WW2Zombies.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        */
+        //closes the in and outFiles, handles error exceptions
+        finally {
+            try{
+                if(WW2Zombies.inFile != null)
+                    WW2Zombies.inFile.close();
+                
+                if (WW2Zombies.outFile != null)
+                    WW2Zombies.outFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+        }
         //StartProgramView display;
         //display = new StartProgramView("") {
 
@@ -124,6 +164,23 @@ public class WW2Zombies {
 
         public startProgramView() {
         }
+    }
+    
+    //getter and setter function for PrintWriter and BufferedReader
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        WW2Zombies.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        WW2Zombies.inFile = inFile;
     }
 
 }
