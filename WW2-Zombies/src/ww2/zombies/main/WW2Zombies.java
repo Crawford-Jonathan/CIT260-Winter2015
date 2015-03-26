@@ -32,7 +32,15 @@ public class WW2Zombies {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
-    
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        WW2Zombies.logFile = logFile;
+    }
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -55,8 +63,15 @@ public class WW2Zombies {
         try {
             WW2Zombies.inFile = new BufferedReader(new InputStreamReader(System.in));
             WW2Zombies.outFile = new PrintWriter(System.out, true);
-        } catch (Exception e) {
             
+            //open log file
+            String filePath = "log.txt";
+            WW2Zombies.logFile = new PrintWriter(filePath);
+        } catch (Exception e) {
+            System.out.println(
+                    "Exception: " + e.toString() +
+                    "\nCause: " + e.getCause() +
+                    "\nMessage: " + e.getMessage());
         }
         /**finally {
             try {
@@ -75,6 +90,9 @@ public class WW2Zombies {
                     WW2Zombies.inFile.close();
                 
                 if (WW2Zombies.outFile != null)
+                    WW2Zombies.outFile.close();
+                
+                if (WW2Zombies.logFile != null)
                     WW2Zombies.outFile.close();
             } catch (IOException ex) {
                 System.out.println("Error closing files");
