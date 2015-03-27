@@ -25,7 +25,7 @@ public abstract class MainMenuView extends View {
                 + "\n| Main Menu                    |"
                 + "\n--------------------------------"
                 + "\nG - Start New Game"
-                + "\nC - Continue Saved Game"
+                + "\nC - Continue From Saved Game"
                 + "\nH - Get Help On How to Play The Game"
                 + "\nS - Save Game"
                 + "\nE - Exit"
@@ -35,7 +35,7 @@ public abstract class MainMenuView extends View {
     /**
      *
      * @param choice
-     */
+     *
     //@Override
     public void doAction(char choice) throws MapControlException {
         switch (choice) {
@@ -61,7 +61,33 @@ public abstract class MainMenuView extends View {
         }
         //return choice;
     }
-
+*/
+    //@Override
+    public boolean doAction(String value) throws MapControlException {
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        
+        switch (choice) {
+            case 'G':
+                this.startNewGame();
+                break;
+            case 'C':
+                this.continueSavedGame();
+                break;
+            case 'H':
+                this.helpMenu();
+                break;
+            case 'S':
+                this.saveCurrentGame();
+                break;
+            case 'E':
+                return true;
+            default:
+                ErrorView.display("MainMEnuView", " Invalid Selection, Try Again");
+                break;
+        }
+        return false;
+    }
     private void startNewGame() throws MapControlException {
         //System.out.println("startNewGame function called");
         GameControl.createNewGame(WW2Zombies.getPlayer());
@@ -92,10 +118,10 @@ public abstract class MainMenuView extends View {
     private void exitGame() {
         System.out.println("exit the game function");
     }
-    //@Override
+    /**@Override
     public void doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+*/
     
 }
