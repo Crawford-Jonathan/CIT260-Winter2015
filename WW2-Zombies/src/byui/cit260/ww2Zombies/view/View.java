@@ -34,7 +34,7 @@ public abstract class View implements ViewInterface {
 
         do {
             
-            System.out.println(this.promptMessage);
+            this.console.println(this.promptMessage);
             value = this.getInput();
             this.doAction(value);
         } while (!value.equals("Q"));

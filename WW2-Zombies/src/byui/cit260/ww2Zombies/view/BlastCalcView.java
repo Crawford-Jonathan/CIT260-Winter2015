@@ -5,7 +5,10 @@
  */
 package byui.cit260.ww2Zombies.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -70,14 +73,18 @@ public abstract class BlastCalcView extends View {
         String keyboardInput = null;
         int returnValue = 56;
         //gets input from the keyboard
-        Scanner keyboard = new Scanner(System.in);
+        //Scanner keyboard = new Scanner(System.in);
 
         while (!valid) {
             //asks for input
             System.out.println("Enter Command");
 
-            //gets input from the keyboard and trims off the blanks
-            keyboardInput = keyboard.nextLine();
+            try {
+                //gets input from the keyboard and trims off the blanks
+                keyboardInput = keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(BlastCalcView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             keyboardInput = keyboardInput.trim();
             //input.CharAt(0) = Character.toUpperCase(input.CharAt(0));
 

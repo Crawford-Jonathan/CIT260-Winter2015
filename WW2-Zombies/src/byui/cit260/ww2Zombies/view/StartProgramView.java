@@ -7,7 +7,10 @@ package byui.cit260.ww2Zombies.view;
 
 import byui.cit260.ww2Zombies.control.ProgramControl;
 import byui.cit260.ww2Zombies.model.Player;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * display title screen / banner press enter to continue and enter name continue
@@ -85,14 +88,18 @@ public abstract class StartProgramView extends View {
         boolean valid = false;
         String playersName = null;
         //gets input from the keyboard
-        Scanner keyboard = new Scanner(System.in);
+        //Scanner keyboard = new Scanner(System.in);
 
         while (!valid) {
             //asks for players name
             System.out.println("Enter the player's name below");
 
-            //gets name from the keyboard and trims off the blanks
-            playersName = keyboard.nextLine();
+            try {
+                //gets name from the keyboard and trims off the blanks
+                playersName = keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             playersName = playersName.trim();
 
             //invalid cases
