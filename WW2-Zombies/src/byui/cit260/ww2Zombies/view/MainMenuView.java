@@ -112,7 +112,16 @@ public abstract class MainMenuView extends View {
     }
 
     private void saveCurrentGame() {
-        System.out.println("save game function called");
+        //System.out.println("save game function called");
+        System.out.println("Enter the location where you want to save the game");
+        String filePath = this.getInput();
+        
+        try {
+            //save game to file
+            GameControl.saveCurrentGame(WW2Zombies.getCurrentGame(), filePath);
+        } catch (Exception e) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
     
     private void exitGame() {

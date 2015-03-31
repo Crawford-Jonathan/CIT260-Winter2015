@@ -5,6 +5,7 @@
  */
 package byui.cit260.ww2Zombies.control;
 
+import byui.cit260.ww2Zombies.exceptions.GameControlException;
 import byui.cit260.ww2Zombies.exceptions.MapControlException;
 import byui.cit260.ww2Zombies.model.Bomb;
 import byui.cit260.ww2Zombies.model.Enemies;
@@ -15,6 +16,9 @@ import byui.cit260.ww2Zombies.model.Inventory;
 import byui.cit260.ww2Zombies.model.Inventory.Item;
 import byui.cit260.ww2Zombies.model.Location;
 import byui.cit260.ww2Zombies.model.Map;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 //import byui.cit260.ww2Zombies.control.MapControl;
 
 /**
@@ -121,6 +125,18 @@ public class GameControl {
         private static int NUMBER_OF_INVENTORY_ITEMS;
 
         public Constants() {
+        }
+    }
+    
+    public static void saveCurrentGame(Game game, String filepath)
+            throws GameControlException {
+        try(FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game);
+        }
+        catch(IOException e) {
+            throw new GameControlException(e.getMessage());
         }
     }
 }
