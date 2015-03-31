@@ -5,6 +5,7 @@
  */
 package byui.cit260.ww2Zombies.model;
 
+import byui.cit260.ww2Zombies.control.GameControl;
 import java.io.Serializable;
 
 /**
@@ -19,6 +20,18 @@ public class Map  implements Serializable{
     private double areaDiscovered;
     private Location[][] locations;
 
+    private static Map createMap() {
+        //create map
+        Map map = new Map(5,5);
+        /**
+        //create scenes
+        Scene[] scenes = createScenes();
+        
+        //assign scenes to locations
+        GameControl.assignScenesToLocations(map, scenes);
+        */
+        return map;
+    }
     //constructor
     public Map() {
     }
