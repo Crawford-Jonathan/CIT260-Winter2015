@@ -153,7 +153,7 @@ public class GameControl {
             game = (Game) output.readObject();
         }
         catch(FileNotFoundException fnfe) {
-            throw new GameControlException(e.getMessage());
+            throw new GameControlException(fnfe.getMessage());
         }
         catch(Exception e) {
             throw new GameControlException(e.getMessage());

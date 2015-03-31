@@ -133,13 +133,24 @@ public abstract class MainMenuView extends View {
         try {
             //save game to file
             GameControl.saveCurrentGame(WW2Zombies.getCurrentGame(), filePath);
-        } catch (Exception e) {
+        } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
     
     private void exitGame() {
         System.out.println("exit the game function");
+    }
+
+    /**
+    private static class ex {
+
+        private static String getMessage() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public ex() {
+        }
     }
     /**@Override
     public void doAction(String value) {
