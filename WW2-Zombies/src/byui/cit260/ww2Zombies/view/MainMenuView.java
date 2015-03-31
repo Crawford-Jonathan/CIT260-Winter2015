@@ -97,7 +97,21 @@ public abstract class MainMenuView extends View {
     }
 
     private void continueSavedGame() {
-        System.out.println("continue saved game function called");
+        //System.out.println("continue saved game function called");
+        System.out.println("Where will the game be saved?");
+        
+        String filePath = this.getInput();
+        
+        try {
+            //start saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        //display game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     private void helpMenu() {

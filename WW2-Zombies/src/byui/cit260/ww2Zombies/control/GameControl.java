@@ -16,6 +16,7 @@ import byui.cit260.ww2Zombies.model.Inventory;
 import byui.cit260.ww2Zombies.model.Inventory.Item;
 import byui.cit260.ww2Zombies.model.Location;
 import byui.cit260.ww2Zombies.model.Map;
+import java.io.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -128,6 +129,7 @@ public class GameControl {
         }
     }
     
+    //implementation of the saveCurrentGame function from the MainMenuView
     public static void saveCurrentGame(Game game, String filepath)
             throws GameControlException {
         try(FileOutputStream fops = new FileOutputStream(filepath)) {
@@ -138,5 +140,25 @@ public class GameControl {
         catch(IOException e) {
             throw new GameControlException(e.getMessage());
         }
+    }
+    
+    //implementation of the continueSavedGame function in the MAinMenuView
+    public static void getSavedGame(String filePath)
+            throws GameControlException {
+        Game game = null;
+        
+        try(FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream output = new ObjectInputStream(fips);
+            
+            game = (Game) output.readObject();
+        }
+        catch(FileNotFoundException fnfe) {
+            throw new GameControlException(e.getMessage());
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        //close output file
+        WW2Zombies.setCurrentGame(game);
     }
 }
