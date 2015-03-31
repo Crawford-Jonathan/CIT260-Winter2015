@@ -41,6 +41,7 @@ public class Map  implements Serializable{
                 //create new location
                 Location location1 = new Location();
                 //create a new location in each aray slot.
+                
                 //Assign location1 to Array grid 1,1
                
             }
