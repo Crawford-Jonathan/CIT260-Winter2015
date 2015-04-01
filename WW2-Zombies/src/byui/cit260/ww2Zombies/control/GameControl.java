@@ -16,6 +16,7 @@ import byui.cit260.ww2Zombies.model.Inventory;
 import byui.cit260.ww2Zombies.model.Inventory.Item;
 import byui.cit260.ww2Zombies.model.Location;
 import byui.cit260.ww2Zombies.model.Map;
+import javafx.scene.Scene;
 import java.io.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -70,16 +71,6 @@ public class GameControl {
         medpack.setQuantityInStock(0);
         inventory[Item.medpack.ordinal()] = medpack;
         
-        Inventory ammo = new Inventory();
-        ammo.setDescription("Ammunition");
-        ammo.setQuantityInStock(0);
-        inventory[Item.ammo.ordinal()] = ammo;
-        
-        Inventory grenade = new Inventory();
-        grenade.setDescription("Grenade");
-        grenade.setQuantityInStock(0);
-        inventory[Item.grenade.ordinal()] = grenade;
-        
         Inventory hideoutKey = new Inventory();
         hideoutKey.setDescription("Key to the Enemy Base");
         hideoutKey.setQuantityInStock(0);
@@ -120,6 +111,19 @@ public class GameControl {
             }
         }
         return inventoryList;
+    }
+
+    public static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    /**
+     *
+     * @param map
+     * @param scenes
+     */
+    public static assignScenesToLocations(Map map, byui.cit260.ww2Zombies.model.Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static class Constants {

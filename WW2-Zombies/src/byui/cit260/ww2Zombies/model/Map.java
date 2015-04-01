@@ -13,6 +13,10 @@ import java.io.Serializable;
  * @author SilentMan
  */
 public class Map  implements Serializable{
+
+    private static Scene[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     //class instance variables
     private double rowCount;
@@ -23,13 +27,13 @@ public class Map  implements Serializable{
     private static Map createMap() {
         //create map
         Map map = new Map(5,5);
-        /**
+        
         //create scenes
         Scene[] scenes = createScenes();
         
         //assign scenes to locations
         GameControl.assignScenesToLocations(map, scenes);
-        */
+        
         return map;
     }
     //constructor
