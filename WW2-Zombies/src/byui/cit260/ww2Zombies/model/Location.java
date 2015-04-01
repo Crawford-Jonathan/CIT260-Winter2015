@@ -16,10 +16,10 @@ import java.util.Objects;
 public class Location implements Serializable{
     
     //class instance variables
-    public ArrayList<Animals> animals = new ArrayList<>();
+    //public ArrayList<Animals> animals = new ArrayList<>();
     public ArrayList<Enemies> enemies = new ArrayList<>();
     public ArrayList<Inventory> items = new ArrayList<>();
-    public ArrayList<Inventory> weapons = new ArrayList<>();
+    //public ArrayList<Inventory> weapons = new ArrayList<>();
     private double locationRowCount;
     private double locationColumnCount;
     private ArrayList<Actors> actors;
@@ -29,6 +29,7 @@ public class Location implements Serializable{
     }
     
     //getter and setter functions
+    /**
     public ArrayList getAnimals() {
         return animals;
     }
@@ -36,7 +37,7 @@ public class Location implements Serializable{
     public void setAnimals(ArrayList animals) {
         this.animals = animals;
     }
-
+*/
     public ArrayList getEnemies() {
         return enemies;
     }
@@ -52,7 +53,7 @@ public class Location implements Serializable{
     public void setItems(ArrayList items) {
         this.items = items;
     }
-
+/**
     public ArrayList getWeapons() {
         return weapons;
     }
@@ -60,7 +61,7 @@ public class Location implements Serializable{
     public void setWeapons(ArrayList weapons) {
         this.weapons = weapons;
     }
-
+*/
     public double getLocationRowCount() {
         return locationRowCount;
     }
