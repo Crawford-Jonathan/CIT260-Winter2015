@@ -6,6 +6,7 @@
 package byui.cit260.ww2Zombies.model;
 
 import byui.cit260.ww2Zombies.control.GameControl;
+import javafx.scene.Scene;
 import java.io.Serializable;
 
 /**

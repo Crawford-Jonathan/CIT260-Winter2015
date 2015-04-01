@@ -122,9 +122,7 @@ public class GameControl {
      * @param map
      * @param scenes
      */
-    public static assignScenesToLocations(Map map, byui.cit260.ww2Zombies.model.Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     private static class Constants {
         private static int NUMBER_OF_INVENTORY_ITEMS;
