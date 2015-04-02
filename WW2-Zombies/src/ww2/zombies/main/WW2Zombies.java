@@ -5,12 +5,8 @@
  */
 package ww2.zombies.main;
 
-//import byui.cit260.ww2Zombies.model.Map;
 import byui.cit260.ww2Zombies.model.Player;
-//import byui.cit260.ww2Zombies.model.Actors;
-//import byui.cit260.ww2Zombies.model.Animals;
 import byui.cit260.ww2Zombies.model.Game;
-//import byui.cit260.ww2Zombies.model.Locations;
 import byui.cit260.ww2Zombies.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,7 +24,7 @@ public class WW2Zombies {
     private static Game currentGame = null;
     private static Player player = null;
     
-    //PrintWriter and BufferedREader classes
+    //PrintWriter and BufferedReader classes
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
@@ -101,19 +97,8 @@ public class WW2Zombies {
                 return;
             }
         }
-        //StartProgramView display;
-        //display = new StartProgramView("") {
 
-            
-
-        
     }
-/**
-    public static PrintWriter getoutFile() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-*/
-    
     
     //getter and setter function for PrintWriter and BufferedReader
     public static PrintWriter getOutFile() {

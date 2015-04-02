@@ -26,6 +26,7 @@ public class GameMenuView extends View{
                 + "\nE - Move East"
                 + "\nW - Move West"
                 + "\nV - View Inventory"
+                + "\nB - Bomb Calculations"
                 + "\nR - Return to Previous Menu"
                 + "\n-------------------------------");
     }
@@ -57,6 +58,9 @@ public class GameMenuView extends View{
                 break;
             case 'V':
                 this.viewInventory();
+                break;
+            case 'B':
+                this.bombCalc();
                 break;
             case 'R':
                 return false;
@@ -104,6 +108,11 @@ public class GameMenuView extends View{
                     inventoryItem.getRequiredAmount() + "\t  " + 
                     inventoryItem.getQuantityInStock());
         }
+    }
+    
+    private void bombCalc() {
+        BlastCalcView bombCalc = new BlastCalcView(""); 
+        bombCalc.display();
     }
 
     void displayMenu() {

@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author Jonathan
  */
-public abstract class BlastCalcView extends View {
+public class BlastCalcView extends View {
 
     public BlastCalcView(String promptMessage) {
         super(promptMessage);
@@ -60,7 +60,6 @@ public abstract class BlastCalcView extends View {
                 goodInput3 = true;
             }
         }
-        //get the Player name, if new name than create new Player account
 
         //indicates if player name has been retreived
         boolean valid = false;
