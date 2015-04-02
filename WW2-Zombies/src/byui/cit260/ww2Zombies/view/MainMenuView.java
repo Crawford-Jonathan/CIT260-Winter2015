@@ -7,7 +7,6 @@ package byui.cit260.ww2Zombies.view;
 
 import byui.cit260.ww2Zombies.control.GameControl;
 import byui.cit260.ww2Zombies.exceptions.MapControlException;
-import byui.cit260.ww2Zombies.model.GameMenuView;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,9 +16,9 @@ import ww2.zombies.main.WW2Zombies;
  *
  * @author SilentMan
  */
-public abstract class MainMenuView extends View {
+public class MainMenuView extends View {
 
-    public MainMenuView() {
+    public MainMenuView(String promptMessage) {
         super("\n"
                 + "\n--------------------------------"
                 + "\n| Main Menu                    |"
@@ -30,40 +29,13 @@ public abstract class MainMenuView extends View {
                 + "\nS - Save Game"
                 + "\nE - Exit"
                 + "\n--------------------------------");
+
     }
 
-    /**
-     *
-     * @param choice
-     *
-    //@Override
-    public void doAction(char choice) throws MapControlException {
-        switch (choice) {
-            case 'G':
-                this.startNewGame();
-                break;
-            case 'C':
-                this.continueSavedGame();
-                break;
-            case 'H':
-                this.helpMenu();
-                break;
-            case 'S':
-                this.saveCurrentGame();
-                break;
-            case 'E':
-                //return;
-                this.exitGame();
-                break;
-            default:
-                System.out.println("\n*** Invalid Selection *** Please Try Again");
-                break;
-        }
-        //return choice;
-    }
-*/
-    //@Override
-    public boolean doAction(String value) throws MapControlException {
+    
+    @Override
+    public boolean doAction(Object obj) {
+        String value = (String) obj;
         value = value.toUpperCase();
         char choice = value.charAt(0);
         
@@ -83,7 +55,7 @@ public abstract class MainMenuView extends View {
             case 'E':
                 return true;
             default:
-                ErrorView.display("MainMEnuView", " Invalid Selection, Try Again");
+                ErrorView.display("MainMenuView", " Invalid Selection, Try Again");
                 break;
         }
         return false;
@@ -115,13 +87,7 @@ public abstract class MainMenuView extends View {
     }
 
     private void helpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView() {
-
-            @Override
-            public boolean doAction(Object obj) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
+        HelpMenuView helpMenu = new HelpMenuView(); 
         helpMenu.display();
     }
 
@@ -141,21 +107,6 @@ public abstract class MainMenuView extends View {
     private void exitGame() {
         System.out.println("exit the game function");
     }
-
-    /**
-    private static class ex {
-
-        private static String getMessage() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public ex() {
-        }
-    }
-    /**@Override
-    public void doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-*/
-    
 }
+
+

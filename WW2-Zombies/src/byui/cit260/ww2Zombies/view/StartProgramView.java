@@ -16,54 +16,17 @@ import java.util.logging.Logger;
  * display title screen / banner press enter to continue and enter name continue
  * to main menu
  */
-public abstract class StartProgramView extends View {
+public class StartProgramView extends View {
 
     public StartProgramView(String promptMessage) {
-        super("");
-    }
-
-    /**
-     *
-     */
-    @Override
-    public void display() {
-        //displays the banner screen
-        this.displayBanner();
-
-        //get the Player name
-        String playersName = this.getPlayersName();
-
-        //create and save the player object
-        Player player = ProgramControl.createPlayer(playersName);
-
-        //displays the welcome message
-        this.displayWelcomeMessage(player);
-
-        //display Main Menu
-        MainMenuView mainMenu = new MainMenuView() {
-
-            @Override
-            public boolean doAction(Object obj) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
-        mainMenu.display();
-    }
-
-    private void displayBanner() {
-        System.out.println(
-                "\n\n*********************************************************"
-        );
-        System.out.println(
-                "*                                                       *"
+        super("\n\n*********************************************************"
+                + "\n*                                                       *"
                 + "\n*              Welcome to the Jungle                    *"
                 + "\n*              Congradulations Soldier!                 *"
                 + "\n*     You have been selected for a special mission.     *"
                 + "\n*            Mission Briefing will follow.              *"
                 + "\n*                                                       *"
-        );
-        System.out.println(
-                "*                                                       *"
+                + "\n*                                                       *"
                 + "\n*                     Your Mission:                     *"
                 + "\n*            There have been reports from M.I.          *"
                 + "\n*          suggesting that a previously uninhabited     *"
@@ -76,46 +39,16 @@ public abstract class StartProgramView extends View {
                 + "\n*             P.S. Watch out for the jungle life,       *"
                 + "\n*                some may want your blood.....          *"
                 + "\n*                                                       *"
-        );
-        System.out.println(
-                "***********************************************************"
-        );
+                + "\n***********************************************************"
+                + "\n \n Enter the player's name below");
+        
     }
 
-    //get the Player name, if new name than create new Player account
-    public String getPlayersName() {
-        //indicates if player name has been retreived
-        boolean valid = false;
-        String playersName = null;
-        //gets input from the keyboard
-        //Scanner keyboard = new Scanner(System.in);
+    
 
-        while (!valid) {
-            //asks for players name
-            System.out.println("Enter the player's name below");
-
-            try {
-                //gets name from the keyboard and trims off the blanks
-                playersName = keyboard.readLine();
-            } catch (IOException ex) {
-                Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            playersName = playersName.trim();
-
-            //invalid cases
-            if (playersName.length() < 2) {
-                System.out.println("Invalid name - name must be longer than 2 characters");
-                //repeats
-                continue;
-            }
-
-            //breaks out of the repetition
-            break;
-        }
-        //return the playersNAme
-        return playersName;
-
-    }
+    
+    
+    
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n================================================");
@@ -124,9 +57,22 @@ public abstract class StartProgramView extends View {
         System.out.println("====================================================");
     }
 
-    //@Override
-    public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    @Override
+    public boolean doAction(Object obj) {
+        
+        String playersName = (String)obj;
+        Player player = ProgramControl.createPlayer(playersName);
+
+        //displays the welcome message
+        this.displayWelcomeMessage(player);
+
+        //display Main Menu
+        MainMenuView mainMenu = new MainMenuView("");
+
+            
+        
+        mainMenu.display();
     }
 
 }

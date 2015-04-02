@@ -37,7 +37,7 @@ public abstract class View implements ViewInterface {
             this.console.println(this.promptMessage);
             value = this.getInput();
             this.doAction(value);
-        } while (!value.equals("Q"));
+        } while (!value.equals("E"));
     }
 
     @Override
@@ -83,6 +83,7 @@ public abstract class View implements ViewInterface {
      * return selection;
      *
      * }
+     * @return 
      */
     public String getPromptMessage() {
         return promptMessage;

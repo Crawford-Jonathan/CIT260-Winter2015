@@ -13,12 +13,12 @@ import java.util.Scanner;
  *
  * @author SilentMan
  */
-public abstract class HelpMenuView extends View {
+public class HelpMenuView extends View {
 
     public HelpMenuView() {
         super("\n"
                 + "\n--------------------------------"
-                + "\n| Help Menu                    |"
+                + "\n|         Help Menu            |"
                 + "\n--------------------------------"
                 + "\nD - Game Description"
                 + "\nL - Look Around"
@@ -29,26 +29,30 @@ public abstract class HelpMenuView extends View {
                 + "\nM - View Map"
                 + "\nV - View Inventory"
                 + "\nR - Return to Previous Menu"
-                + "\n--------------------------------");
+                + "\n-------------------------------");
     }
-
-    public boolean doAction(String selection) {
-    //private void doAction(char selection) {
-        switch (selection) {
-            case "D":
+    
+    @Override
+    public boolean doAction(Object obj) {
+        String value = (String) obj;
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        
+        switch (choice) {
+            case 'D':
                 this.gameDescription();
                 break;
-            case "L":
+            case 'L':
                 this.lookAround();
                 break;
-            case "M":
+            case 'M':
                 this.viewMap();
                 break;
-            case "V":
+            case 'V':
                 this.viewInventory();
                 break;
 
-            case "R":
+            case 'R':
                 return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
@@ -62,7 +66,7 @@ public abstract class HelpMenuView extends View {
     }
 
     private void lookAround() {
-        System.out.println("you see stuff");
+        System.out.println("you see nothing but jungle.  Best get moving.");
     }
 
     private void viewMap() {
@@ -70,7 +74,6 @@ public abstract class HelpMenuView extends View {
     }
 
     private void viewInventory() {
-        //System.out.println("view your stuff");
         Inventory[]  inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
@@ -83,10 +86,4 @@ public abstract class HelpMenuView extends View {
                     inventoryItem.getQuantityInStock());
         }
     }
-
-    //@Override
-    //public void doAction(String value) {
-  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-  //  }
-
 }
