@@ -89,17 +89,17 @@ public class Location implements Serializable{
     //toString
     @Override
     public String toString() {
-        return "Locations{" + "animals=" + animals + ", enemies=" + enemies + ", items=" + items + ", weapons=" + weapons + ", locationRowCount=" + locationRowCount + ", locationColumnCount=" + locationColumnCount + '}';
+        return "Locations{" + ", enemies=" + enemies + ", items=" + items + ", locationRowCount=" + locationRowCount + ", locationColumnCount=" + locationColumnCount + '}';
     }
 
     //equals and hashCode
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.animals);
+        //hash = 53 * hash + Objects.hashCode(this.animals);
         hash = 53 * hash + Objects.hashCode(this.enemies);
         hash = 53 * hash + Objects.hashCode(this.items);
-        hash = 53 * hash + Objects.hashCode(this.weapons);
+        //hash = 53 * hash + Objects.hashCode(this.weapons);
         hash = 53 * hash + (int) (Double.doubleToLongBits(this.locationRowCount) ^ (Double.doubleToLongBits(this.locationRowCount) >>> 32));
         hash = 53 * hash + (int) (Double.doubleToLongBits(this.locationColumnCount) ^ (Double.doubleToLongBits(this.locationColumnCount) >>> 32));
         return hash;
@@ -114,18 +114,18 @@ public class Location implements Serializable{
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.animals, other.animals)) {
-            return false;
-        }
+        //if (!Objects.equals(this.animals, other.animals)) {
+        //    return false;
+        //}
         if (!Objects.equals(this.enemies, other.enemies)) {
             return false;
         }
         if (!Objects.equals(this.items, other.items)) {
             return false;
         }
-        if (!Objects.equals(this.weapons, other.weapons)) {
-            return false;
-        }
+        //if (!Objects.equals(this.weapons, other.weapons)) {
+        //    return false;
+        //}
         if (Double.doubleToLongBits(this.locationRowCount) != Double.doubleToLongBits(other.locationRowCount)) {
             return false;
         }
