@@ -179,9 +179,9 @@ public class WW2Zombies {
     }
 
     private static class startProgramView {
-
+            
         private static void display() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         public startProgramView() {

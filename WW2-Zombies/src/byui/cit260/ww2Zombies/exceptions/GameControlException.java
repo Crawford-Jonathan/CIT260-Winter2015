@@ -30,7 +30,6 @@ public class GameControlException extends Exception {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 
-    //public GameControlException(String message) {
-    //}
+    
     
 }
