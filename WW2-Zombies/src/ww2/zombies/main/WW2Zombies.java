@@ -60,7 +60,7 @@ public class WW2Zombies {
 
     public static void main(String[] args) {
         
-        StartProgramView startProgramView = new StartProgramView();
+        StartProgramView startProgramView = new StartProgramView("");
             
             try{
                 startProgramView.display();
@@ -108,11 +108,11 @@ public class WW2Zombies {
 
         
     }
-
+/**
     public static PrintWriter getoutFile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
-
+*/
     
     
     //getter and setter function for PrintWriter and BufferedReader

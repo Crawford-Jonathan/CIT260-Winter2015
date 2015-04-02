@@ -22,7 +22,7 @@ public abstract class View implements ViewInterface {
     private String promptMessage;
     
     protected final BufferedReader keyboard = WW2Zombies.getInFile();
-    protected final PrintWriter console = WW2Zombies.getoutFile();
+    protected final PrintWriter console = WW2Zombies.getOutFile();
 
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
@@ -32,8 +32,7 @@ public abstract class View implements ViewInterface {
     public void display() {
         String value;
 
-        do {
-            
+        do {  
             this.console.println(this.promptMessage);
             value = this.getInput();
             this.doAction(value);
