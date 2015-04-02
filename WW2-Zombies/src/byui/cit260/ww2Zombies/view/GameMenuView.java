@@ -17,13 +17,14 @@ public class GameMenuView extends View{
 
     super("\n + "
                 + "\n--------------------------------"
-                + "\n|         Help Menu            |"
+                + "\n|         Game Menu            |"
                 + "\n--------------------------------"
                 + "\nM - View Map"
-                + "\nW - Move North"
+                + "\nL - Look Around"
+                + "\nN - Move North"
                 + "\nS - Move South"
-                + "\nA - Move East"
-                + "\nD - Move West"
+                + "\nE - Move East"
+                + "\nW - Move West"
                 + "\nV - View Inventory"
                 + "\nR - Return to Previous Menu"
                 + "\n-------------------------------");
@@ -71,7 +72,8 @@ public class GameMenuView extends View{
     }
     
     private void lookAround() {
-        System.out.println("you see nothing but jungle.  Best get moving.");
+        System.out.println("You see nothing but jungle.  You hear the low moaning of zombies.  "
+                + "\nBest get moving before they find you.");
     }
     
     private void moveNorth() {

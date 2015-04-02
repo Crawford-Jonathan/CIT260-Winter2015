@@ -20,12 +20,6 @@ public abstract class BlastCalcView extends View {
         super(promptMessage);
     }
 
-    //private int power;
-    //private int diameter;
-    //private int heat;
-
-    //Im not sure what the error is, it's pulling the correct types from the view superclass
-
     /**
      *
      * @param promptMessage
