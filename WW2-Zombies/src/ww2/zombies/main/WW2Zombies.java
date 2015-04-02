@@ -60,6 +60,17 @@ public class WW2Zombies {
 
     public static void main(String[] args) {
         
+        StartProgramView startProgramView = new StartProgramView();
+            
+            try{
+                startProgramView.display();
+            } catch (Throwable te){
+            System.out.println(te.getMessage());
+                te.printStackTrace();
+                startProgramView.display();
+            }
+        
+        
         try {
             WW2Zombies.inFile = new BufferedReader(new InputStreamReader(System.in));
             WW2Zombies.outFile = new PrintWriter(System.out, true);
@@ -103,13 +114,6 @@ public class WW2Zombies {
         //display = new StartProgramView("") {
 
             
-            try{
-                startProgramView.display();
-            } catch (Throwable te){
-            System.out.println(te.getMessage());
-                te.printStackTrace();
-                startProgramView.display();
-            }
 
             //@Override
             // boolean doAction(Object obj) {
@@ -178,15 +182,16 @@ public class WW2Zombies {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static class startProgramView {
+    /**private static class startProgramView {
             
-        private static void display() {
+        //private static void display() {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
+        //}
 
         public startProgramView() {
         }
     }
+*/
     
     //getter and setter function for PrintWriter and BufferedReader
     public static PrintWriter getOutFile() {
