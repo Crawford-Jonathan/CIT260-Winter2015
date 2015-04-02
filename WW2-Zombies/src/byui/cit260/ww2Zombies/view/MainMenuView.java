@@ -41,7 +41,13 @@ public class MainMenuView extends View {
         
         switch (choice) {
             case 'G':
+        {
+            try {
                 this.startNewGame();
+            } catch (MapControlException ex) {
+                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case 'C':
                 this.continueSavedGame();

@@ -28,7 +28,7 @@ public class WW2Zombies {
     private static Game currentGame = null;
     private static Player player = null;
     
-    //PrintWrtier and BufferedREader classes
+    //PrintWriter and BufferedREader classes
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
@@ -84,16 +84,7 @@ public class WW2Zombies {
                     "\nCause: " + e.getCause() +
                     "\nMessage: " + e.getMessage());
         }
-        /**finally {
-            try {
-                WW2Zombies.inFile.close();
-                WW2Zombies.outFile.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WW2Zombies.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-        }
-        */
+        
         //closes the in and outFiles, handles error exceptions
         finally {
             try{
@@ -115,83 +106,14 @@ public class WW2Zombies {
 
             
 
-            //@Override
-            // boolean doAction(Object obj) {
-            //    throw new UnsupportedOperationException();
-           // };
-        //};
-        //display.display();
-
-        /*
         
-         //calls the Player class
-         Player playerOne = new Player();
-        
-         playerOne.setName("Fred Flintstone");
-        
-         String playerInfo = playerOne.toString();
-         System.out.println(playerInfo);
-        
-         //calls Map class
-         Map islandOne = new Map();
-        
-         islandOne.setRowCount(5);
-         islandOne.setColumnCount(5);
-         islandOne.setAreaDiscovered(10);
-        
-         String mapInfo = islandOne.toString();
-         System.out.println(mapInfo);
-        
-         //calls Locations class
-         Locations roomOne = new Locations();    
-        
-         roomOne.setAnimals("deer");
-         roomOne.setEnemies("zombies");
-         roomOne.setItems("snake antivenom");
-         roomOne.setWeapons("M1 Garand");
-         roomOne.setLocationColumnCount(5);
-         roomOne.setLocationRowCount(5);
-        
-         String locationsInfo = roomOne.toString();
-         System.out.println(locationsInfo);
-        
-         //calls Animals class
-         Animals islandAnimals = new Animals();
-        
-         islandAnimals.setDeer("deer");
-         islandAnimals.setMonkey("monkey");
-         islandAnimals.setPheasent("pheasent");
-        
-         String animalsInfo = islandAnimals.toString();
-         System.out.println(animalsInfo);
-        
-         //Calls Game Class
-         Game newGame=new Game();
-        
-         //Calls Actors Class
-         //Actors character=new Actors();
-         //character.setActor(1);
-         //character.setActor(2);
-         //character.setActor(3);
-         //character.setActor(4);
-        
-         */
     }
 
     public static PrintWriter getoutFile() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    /**private static class startProgramView {
-            
-        //private static void display() {
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        //}
-
-        public startProgramView() {
-        }
-    }
-*/
+    
     
     //getter and setter function for PrintWriter and BufferedReader
     public static PrintWriter getOutFile() {

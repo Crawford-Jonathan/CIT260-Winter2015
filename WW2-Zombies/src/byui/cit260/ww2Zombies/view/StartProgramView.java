@@ -45,12 +45,6 @@ public class StartProgramView extends View {
         
     }
 
-    
-
-    
-    
-    
-
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n================================================");
         System.out.println("\tWelcome to the game Sergeant " + player.getName());
@@ -58,7 +52,6 @@ public class StartProgramView extends View {
         System.out.println("====================================================");
     }
 
-    
     @Override
     public boolean doAction(Object obj) {
         
@@ -71,9 +64,8 @@ public class StartProgramView extends View {
         //display Main Menu
         MainMenuView mainMenu = new MainMenuView("");
 
-            
-        
         mainMenu.display();
+        return false;
         
     }
 
