@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  */
 public class StartProgramView extends View {
 
+    //sends message to the View display().  Everything to be displayed.
     public StartProgramView(String promptMessage) {
         super("\n\n*********************************************************"
                 + "\n*                                                       *"
