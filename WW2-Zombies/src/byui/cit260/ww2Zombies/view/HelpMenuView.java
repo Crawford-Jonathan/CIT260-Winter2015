@@ -21,11 +21,6 @@ public class HelpMenuView extends View {
                 + "\n|         Help Menu            |"
                 + "\n--------------------------------"
                 + "\nD - Game Description"
-                + "\nL - Look Around"
-                //+ "\nW - Move North"
-                //+ "\nS - Move South"
-                //+ "\nA - Move East"
-                //+ "\nD - Move West"
                 + "\nM - View Map"
                 + "\nV - View Inventory"
                 + "\nR - Return to Previous Menu"
@@ -42,16 +37,12 @@ public class HelpMenuView extends View {
             case 'D':
                 this.gameDescription();
                 break;
-            case 'L':
-                this.lookAround();
-                break;
             case 'M':
                 this.viewMap();
                 break;
             case 'V':
                 this.viewInventory();
                 break;
-
             case 'R':
                 return false;
             default:
@@ -62,11 +53,12 @@ public class HelpMenuView extends View {
     }
 
     private void gameDescription() {
-        System.out.println("place game description here");
-    }
-
-    private void lookAround() {
-        System.out.println("you see nothing but jungle.  Best get moving.");
+        System.out.println("\n*                     Your Mission:                     *"
+                         + "\n*      The Nazis have been conducting experiments       *"
+                         + "\n*          and created the Zombie Apocalypse.           *"
+                         + "\n*          Your squad must create a bomb using          *"
+                         + "\n*           native materials and blow the Nazi          *"
+                         + "\n*         base into as many pieces as possible.         *");
     }
 
     private void viewMap() {

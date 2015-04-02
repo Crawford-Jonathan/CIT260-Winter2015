@@ -74,6 +74,7 @@ public class StartProgramView extends View {
             
         
         mainMenu.display();
+        
     }
 
 }

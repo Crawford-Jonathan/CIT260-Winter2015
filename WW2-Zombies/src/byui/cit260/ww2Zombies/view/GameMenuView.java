@@ -5,6 +5,9 @@
  */
 package byui.cit260.ww2Zombies.view;
 
+import byui.cit260.ww2Zombies.control.GameControl;
+import byui.cit260.ww2Zombies.model.Inventory;
+
 /**
  *
  * @author SilentMan
@@ -16,20 +19,91 @@ public class GameMenuView extends View{
                 + "\n--------------------------------"
                 + "\n|         Help Menu            |"
                 + "\n--------------------------------"
-                + "\nD - Game Description"
-                + "\nL - Look Around"
-                //+ \"\\nW - Move North\"\n" +
-                //+ \"\\nS - Move South\"\n" +
-                //+ \"\\nA - Move East\"\n" +
-                //+ \"\\nD - Move West\"\n" +
                 + "\nM - View Map"
+                + "\nW - Move North"
+                + "\nS - Move South"
+                + "\nA - Move East"
+                + "\nD - Move West"
                 + "\nV - View Inventory"
                 + "\nR - Return to Previous Menu"
                 + "\n-------------------------------");
-    
-    
-    public void displayMenu() {
-        System.out.println("displayMenu function called");
     }
+    
+    @Override
+    public boolean doAction(Object obj) {
+        String value = (String) obj;
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        
+        switch (choice) {
+            case 'M':
+                this.viewMap();
+                break;
+            case 'L':
+                this.lookAround();
+                break;
+            case 'W':
+                this.moveNorth();
+                break;
+            case 'S':
+                this.moveSouth();
+                break;
+            case 'A':
+                this.moveWest();
+                break;
+            case 'D':
+                this.moveEast();
+                break;
+            case 'V':
+                this.viewInventory();
+                break;
+            case 'R':
+                return false;
+            default:
+                System.out.println("\n*** Invalid Selection *** Please Try Again");
+                break;
+        }
+        return false;
+    }
+    
+    private void viewMap() {
+        System.out.println("shows the map");
+    }
+    
+    private void lookAround() {
+        System.out.println("you see nothing but jungle.  Best get moving.");
+    }
+    
+    private void moveNorth() {
+        System.out.println("code to move north");
+    }
+    
+    private void moveSouth() {
+        System.out.println("code to move south");
+    }
+    
+    private void moveEast() {
+        System.out.println("code to move east");
+    }
+    
+    private void moveWest() {
+        System.out.println("code to move west");
+    }
+
+    private void viewInventory() {
+        Inventory[]  inventory = GameControl.getSortedInventoryList();
+        
+        System.out.println("\nList of Inventory Items");
+        System.out.println("Description" + "\t" + "Required" + "\t" + "In Stock");
+        
+        //for each inventory item
+        for (Inventory inventoryItem : inventory) {
+            System.out.println(inventoryItem.getDescription() + "\t  " + 
+                    inventoryItem.getRequiredAmount() + "\t  " + 
+                    inventoryItem.getQuantityInStock());
+        }
+    }
+
+    
 }
-}
+
