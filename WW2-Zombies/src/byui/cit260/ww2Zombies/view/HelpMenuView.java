@@ -23,7 +23,7 @@ public class HelpMenuView extends View {
                 + "\nD - Game Description"
                 + "\nM - View Map"
                 + "\nV - View Inventory"
-                + "\nR - Return to Previous Menu"
+                + "\nE - Return to Previous Menu"
                 + "\n-------------------------------");
     }
     
@@ -43,7 +43,7 @@ public class HelpMenuView extends View {
             case 'V':
                 this.viewInventory();
                 break;
-            case 'R':
+            case 'E':
                 return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");

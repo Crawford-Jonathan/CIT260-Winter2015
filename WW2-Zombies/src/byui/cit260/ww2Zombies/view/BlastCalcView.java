@@ -15,16 +15,48 @@ import java.util.logging.Logger;
  * @author Jonathan
  */
 public class BlastCalcView extends View {
-
+//public abstract class BlastCalcView extends View {
+    /**
     public BlastCalcView(String promptMessage) {
         super(promptMessage);
     }
-
+    */
+    public BlastCalcView() {
+            super("\n*  To blow up the Nazi's base you will need an extremely precise amount  *"
+                + "\n*            of explosives (meaning a lot).  You need to find            *"
+                + "\n*        the power of the bomb to know if it will be sufficient.         *"
+                + "\n*            P - create the blast power of the bomb                      *"
+                + "\n*            D - create the diameter of the bomb                         *"
+                + "\n*            E - Return to previous menu                                 *");
+    }
     /**
      *
      * @param promptMessage
      */
 
+    @Override
+    public boolean doAction(Object obj) {
+        String value = (String) obj;
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        
+        switch (choice) {
+            case 'P':
+                this.blastPower();
+                break;
+            case 'D':
+                this.bombDiameter();
+                break;
+            case 'E':
+                return false;
+            default:
+                System.out.println("\n*** Invalid Selection *** Please Try Again");
+                break;
+        }
+    return false;
+    }
+    
+    
     public int getCalc() {
 
         Boolean goodInput1 = false;
@@ -95,7 +127,10 @@ public class BlastCalcView extends View {
         return returnValue;
     }
 
-    public double calcBlast(double power, double diameter, double heat) {
+    public double blastPower(double power, double diameter, double heat) {
+        
+        
+        
         if (power < 20 || power > 60) {
             return -1;
         }
@@ -109,9 +144,6 @@ public class BlastCalcView extends View {
         return blast;
     }
 
-    //@Override
-    public void doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }

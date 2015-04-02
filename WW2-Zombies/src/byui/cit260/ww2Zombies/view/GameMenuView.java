@@ -21,13 +21,13 @@ public class GameMenuView extends View{
                 + "\n--------------------------------"
                 + "\nM - View Map"
                 + "\nL - Look Around"
-                + "\nN - Move North"
+                + "\nW - Move North"
                 + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West"
+                + "\nD - Move East"
+                + "\nA - Move West"
                 + "\nV - View Inventory"
                 + "\nB - Bomb Calculations"
-                + "\nR - Return to Previous Menu"
+                + "\nE - Return to Previous Menu"
                 + "\n-------------------------------");
     }
     
@@ -62,7 +62,7 @@ public class GameMenuView extends View{
             case 'B':
                 this.bombCalc();
                 break;
-            case 'R':
+            case 'E':
                 return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Please Try Again");
@@ -111,7 +111,7 @@ public class GameMenuView extends View{
     }
     
     private void bombCalc() {
-        BlastCalcView bombCalc = new BlastCalcView(""); 
+        BlastCalcView bombCalc = new BlastCalcView(); 
         bombCalc.display();
     }
 
