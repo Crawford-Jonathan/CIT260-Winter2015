@@ -15,12 +15,7 @@ import java.util.logging.Logger;
  * @author Jonathan
  */
 public class BlastCalcView extends View {
-//public abstract class BlastCalcView extends View {
-    /**
-    public BlastCalcView(String promptMessage) {
-        super(promptMessage);
-    }
-    */
+
     public BlastCalcView() {
             super("\n*  To blow up the Nazi's base you will need an extremely precise amount  *"
                 + "\n*            of explosives (meaning a lot).  You need to find            *"
@@ -56,7 +51,8 @@ public class BlastCalcView extends View {
     return false;
     }
     
-    
+    //this calc will find the diameter of the bomb
+    //player will have metal in sq. feet, find how big a bomb can be made
     public int bombDiameter() {
 
         Boolean goodInput1 = false;
@@ -93,6 +89,8 @@ public class BlastCalcView extends View {
             }
         }
 
+    //I dont know why all this code is here
+        
         //indicates if player name has been retreived
         boolean valid = false;
         String keyboardInput = null;
@@ -127,6 +125,7 @@ public class BlastCalcView extends View {
         return returnValue;
     }
 
+    //Player gives bomb diameter, find how much explosive can be stuffed in there
     public double blastPower(double power, double diameter, double heat) {
         
         
