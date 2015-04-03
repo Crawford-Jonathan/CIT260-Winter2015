@@ -22,7 +22,6 @@ public class Map  implements Serializable{
     //class instance variables
     private double rowCount;
     private double columnCount;
-    private double areaDiscovered;
     private Location[][] locations;
 
     private static Map createMap() {
@@ -66,9 +65,6 @@ public class Map  implements Serializable{
         }
     }
 
-    //public Map(int i, int i0) {
-    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
 
     //getter and setter functions
     public double getRowCount() {
@@ -86,14 +82,6 @@ public class Map  implements Serializable{
     public void setColumnCount(double columnCount) {
         this.columnCount = columnCount;
     }
-
-    public double getAreaDiscovered() {
-        return areaDiscovered;
-    }
-
-    public void setAreaDiscovered(double areaDiscovered) {
-        this.areaDiscovered = areaDiscovered;
-    }
     
     public Location[][] getLocations() {
         return locations;
@@ -106,7 +94,7 @@ public class Map  implements Serializable{
     //toString()
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + ", areaDiscovered=" + areaDiscovered + '}';
+        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
     
     //equals() and hashCode()
@@ -115,7 +103,6 @@ public class Map  implements Serializable{
         int hash = 7;
         hash = 23 * hash + (int) (Double.doubleToLongBits(this.rowCount) ^ (Double.doubleToLongBits(this.rowCount) >>> 32));
         hash = 23 * hash + (int) (Double.doubleToLongBits(this.columnCount) ^ (Double.doubleToLongBits(this.columnCount) >>> 32));
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.areaDiscovered) ^ (Double.doubleToLongBits(this.areaDiscovered) >>> 32));
         return hash;
     }
 
@@ -132,9 +119,6 @@ public class Map  implements Serializable{
             return false;
         }
         if (Double.doubleToLongBits(this.columnCount) != Double.doubleToLongBits(other.columnCount)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.areaDiscovered) != Double.doubleToLongBits(other.areaDiscovered)) {
             return false;
         }
         return true;

@@ -22,6 +22,7 @@ public abstract class InventoryMenuView extends View {
                 + "\n-------------------------------------"
                 + "\nP - Pick up Item"
                 + "\nD - Drop Item"
+                + "]nV - View Inventory"
                 + "\nR - Return to Previous Menu"
                 + "\n-------------------------------------");
     }
@@ -39,6 +40,9 @@ public abstract class InventoryMenuView extends View {
             case 'D':
                 this.dropItem();
                 break;
+            case 'V':
+                this.viewInventory();
+                break;
             case 'R':
                 return false;
             default:
@@ -50,12 +54,13 @@ public abstract class InventoryMenuView extends View {
 
     private void pickUpItem() {
         System.out.println("Picks up item.");
-            //UpgradeCarrySpace gameMenu = new UpgradeCarrySpace();
-        //gameMenu.displayMenu();
     }
 
     private void dropItem() {
         System.out.println("Drops item on the ground.");
     }
     
+    private void viewInventory() {
+        System.out.println("See list of Inventory");
+    }
 }

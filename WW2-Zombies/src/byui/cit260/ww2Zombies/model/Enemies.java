@@ -33,7 +33,8 @@ public class Enemies implements Serializable{
     //toString
     @Override
     public String toString() {
-        return "Enemies{" + "zombies=" + zombies + '}';
+        //return "Enemies{" + "zombies=" + zombies + '}';
+        return zombies;
     }
 
     //hashCode and equals functions
