@@ -67,7 +67,6 @@ public class MainMenuView extends View {
         return false;
     }
     private void startNewGame() throws MapControlException {
-        //System.out.println("startNewGame function called");
         GameControl.createNewGame(WW2Zombies.getPlayer());
 
         GameMenuView gameMenu = new GameMenuView();
@@ -75,7 +74,6 @@ public class MainMenuView extends View {
     }
 
     private void continueSavedGame() {
-        //System.out.println("continue saved game function called");
         System.out.println("Where will the game be saved?");
         
         String filePath = this.getInput();
@@ -98,7 +96,6 @@ public class MainMenuView extends View {
     }
 
     private void saveCurrentGame() {
-        //System.out.println("save game function called");
         System.out.println("Enter the location where you want to save the game");
         String filePath = this.getInput();
         

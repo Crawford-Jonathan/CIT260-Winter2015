@@ -57,20 +57,21 @@ public abstract class InventoryMenuView extends View {
     }
 
     private void calcInvSpace() {
-        //
+        //find out the total backpack space
         System.out.println("Everyone in the squad has a backpack. You need to "
                 + "find out how much total space is available.  "
                 + "\n dimensions are in feet - x, y, z"
                 + "\n Sarge - 2, 1, 2 "
                 + "\n 3 Rifleman - 2, 1, 3"
                 + "\n Grendier - 2, 2, 3");
-        if (var total == 192) {
+        int total = 192;
+        if (total == 192) {
             System.out.println("Correct");
             
-            else {
-                    
-                    }
-    }
+        } else {
+              System.out.println("Incorrect, try again");
+            }      
+    
     }
     
     private void viewInventory() {
