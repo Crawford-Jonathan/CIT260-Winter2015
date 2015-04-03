@@ -8,6 +8,7 @@ package ww2.zombies.main;
 import byui.cit260.ww2Zombies.model.Player;
 import byui.cit260.ww2Zombies.model.Game;
 import byui.cit260.ww2Zombies.view.StartProgramView;
+import byui.cit260.ww2Zombies.view.View;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -60,10 +61,12 @@ public class WW2Zombies {
             
             try{
                 startProgramView.display();
+                //View.display();
             } catch (Throwable te){
             System.out.println(te.getMessage());
                 te.printStackTrace();
                 startProgramView.display();
+                //View.display();
             }
         
         
@@ -91,7 +94,7 @@ public class WW2Zombies {
                     WW2Zombies.outFile.close();
                 
                 if (WW2Zombies.logFile != null)
-                    WW2Zombies.outFile.close();
+                    WW2Zombies.logFile.close();
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
