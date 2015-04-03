@@ -41,9 +41,9 @@ public class BlastCalcView extends View {
         char choice = value.charAt(0);
         
         switch (choice) {
-            case 'P':
-                this.blastPower();
-                break;
+            //case 'P':
+            //    this.blastPower();
+            //    break;
             case 'D':
                 this.bombDiameter();
                 break;
@@ -57,7 +57,7 @@ public class BlastCalcView extends View {
     }
     
     
-    public int getCalc() {
+    public int bombDiameter() {
 
         Boolean goodInput1 = false;
         Boolean goodInput2 = false;
@@ -69,7 +69,7 @@ public class BlastCalcView extends View {
 
         while (goodInput1 == false) {
             //get input from command line
-            inputPower = this.getCalc();//get users selection
+            inputPower = this.bombDiameter();//get users selection
 
             if (inputPower > 19 && inputPower < 61) {
                 goodInput1 = true;
@@ -78,7 +78,7 @@ public class BlastCalcView extends View {
         }
         while (goodInput2 == false) {
             //get input from command line
-            inputDiameter = this.getCalc();//get users selection
+            inputDiameter = this.bombDiameter();//get users selection
 
             if (inputDiameter > 19 && inputDiameter < 61) {
                 goodInput2 = true;
@@ -86,7 +86,7 @@ public class BlastCalcView extends View {
         }
         while (goodInput3 == false) {
             //get input from command line
-            inputHeat = this.getCalc();//get users selection
+            inputHeat = this.bombDiameter();//get users selection
 
             if (inputHeat > 19 && inputHeat < 61) {
                 goodInput3 = true;
