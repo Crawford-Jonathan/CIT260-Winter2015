@@ -21,9 +21,6 @@ public class Player implements Serializable{
         
     }
 
-    
-    
-    
     //getter and setter functions
     public String getName() {
         return name;

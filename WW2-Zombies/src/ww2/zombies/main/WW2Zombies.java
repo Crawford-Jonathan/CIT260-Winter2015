@@ -23,6 +23,7 @@ import java.util.logging.Logger;
  */
 public class WW2Zombies {
 
+    
     private static Game currentGame = null;
     private static Player player = null;
     
