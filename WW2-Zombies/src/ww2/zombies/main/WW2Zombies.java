@@ -37,6 +37,16 @@ public class WW2Zombies {
 
     public static void main(String[] args) {
         
+        /**
+        This still prints Fred for the player name
+        Player playerOne = new Player();
+        
+        playerOne.setName("Fred");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+        */
+        
         StartProgramView startProgramView = new StartProgramView();
             
             try{
@@ -84,7 +94,7 @@ public class WW2Zombies {
     }
     
     
-
+    //getter and setter functions
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -101,7 +111,6 @@ public class WW2Zombies {
         WW2Zombies.player = player;
     }
 
-    //getter and setter function for PrintWriter and BufferedReader
     public static PrintWriter getOutFile() {
         return outFile;
     }
@@ -125,5 +134,7 @@ public class WW2Zombies {
     public static void setLogFile(PrintWriter logFile) {
         WW2Zombies.logFile = logFile;
     }
+    
+    
     
 }

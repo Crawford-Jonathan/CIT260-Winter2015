@@ -13,12 +13,12 @@ import java.util.Objects;
  * @author SilentMan
  */
 public class Player implements Serializable{
+    //public static Player playerOne;
     
     //class instance variables
     private String name;
 
-    public Player() {
-        
+    public Player() {    
     }
 
     //getter and setter functions
