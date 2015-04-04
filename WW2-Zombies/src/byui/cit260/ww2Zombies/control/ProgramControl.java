@@ -14,14 +14,14 @@ import ww2.zombies.main.WW2Zombies;
  */
 public class ProgramControl {
 
-    public static Player createPlayer(String name) {
+    public static Player createPlayer(String playersName) {
         
-        if (name == null) {
+        if (playersName == null) {
             return null;
         }
         
         Player player = new Player();
-        player.setName(name);
+        player.setName(playersName);
         
         //saves the player
         WW2Zombies.setPlayer(player);

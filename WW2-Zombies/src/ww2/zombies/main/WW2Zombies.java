@@ -57,7 +57,7 @@ public class WW2Zombies {
 
     public static void main(String[] args) {
         
-        StartProgramView startProgramView = new StartProgramView("");
+        StartProgramView startProgramView = new StartProgramView();
             
             try{
                 startProgramView.display();

@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class StartProgramView extends View {
 
     //sends message to the View display().  Everything to be displayed.
-    public StartProgramView(String promptMessage) {
+    public StartProgramView() {
         super("\n\n*********************************************************"
                 + "\n*                                                       *"
                 + "\n*              Welcome to the Jungle                    *"
@@ -55,18 +55,42 @@ public class StartProgramView extends View {
     @Override
     public boolean doAction(Object obj) {
         
+       
+        
         String playersName = (String)obj;
         Player player = ProgramControl.createPlayer(playersName);
-
+    
         //displays the welcome message
         this.displayWelcomeMessage(player);
 
         //display Main Menu
-        MainMenuView mainMenu = new MainMenuView("");
+        MainMenuView mainMenu = new MainMenuView();
 
         mainMenu.display();
         return false;
-        
+        //return display();
     }
 
+    /**
+    @Override
+    public boolean doAction(Object obj) {
+        String playersName = (String)obj;
+        
+        return false;
+    }
+    
+    public void startProgram() {
+        //String playersName = (String);
+        Player player = ProgramControl.createPlayer(playersName);
+    
+        //displays the welcome message
+        this.displayWelcomeMessage(player);
+
+        //display Main Menu
+        MainMenuView mainMenuView = new MainMenuView();
+
+        mainMenuView.display();
+        //return false;
+    }
+    */
 }

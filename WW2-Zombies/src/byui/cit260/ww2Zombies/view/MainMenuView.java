@@ -18,7 +18,7 @@ import ww2.zombies.main.WW2Zombies;
  */
 public class MainMenuView extends View {
 
-    public MainMenuView(String promptMessage) {
+    public MainMenuView() {
         super("\n"
                 + "\n--------------------------------"
                 + "\n| Main Menu                    |"
