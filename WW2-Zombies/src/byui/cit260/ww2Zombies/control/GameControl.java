@@ -144,7 +144,7 @@ public class GameControl {
         }
     }
     
-    //implementation of the continueSavedGame function in the MAinMenuView
+    //implementation of the continueSavedGame function in the MainMenuView
     public static void getSavedGame(String filePath)
             throws GameControlException {
         Game game = null;

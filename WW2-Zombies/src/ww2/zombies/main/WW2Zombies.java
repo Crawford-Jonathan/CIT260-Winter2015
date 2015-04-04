@@ -48,18 +48,19 @@ public class WW2Zombies {
         */
         
         StartProgramView startProgramView = new StartProgramView();
+            //startProgramView.display();
             
             try{
                 //nullPointerException Error.  
                 startProgramView.display();
-        /**    } catch (Throwable te){
+            } catch (Throwable te){
             System.out.println(te.getMessage());
                 te.printStackTrace();
                 startProgramView.display();
             }
-        */
         
-        //try {
+        
+        try {
             WW2Zombies.inFile = new BufferedReader(new InputStreamReader(System.in));
             WW2Zombies.outFile = new PrintWriter(System.out, true);
             
