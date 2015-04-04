@@ -17,7 +17,7 @@ public class ErrorView {
     
     //PrintWriter gets the outfile from the main
     private static final PrintWriter errorFile = WW2Zombies.getOutFile();
-    private static final PrintWriter logFile =WW2Zombies.getLogFile();
+    private static final PrintWriter logFile = WW2Zombies.getLogFile();
     
     public static void display(String className, String errorMessage) {
         
