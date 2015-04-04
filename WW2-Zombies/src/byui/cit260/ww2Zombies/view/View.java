@@ -31,13 +31,14 @@ public abstract class View implements ViewInterface {
     @Override
     public void display() {
         String value;
-
+        boolean done = false;
+        
         do {  
             //throwing NullPointException Error, console is getting null
             this.console.println(this.promptMessage);
             value = this.getInput();
-            this.doAction(value);
-        } while (!value.equals("E"));
+            done = this.doAction(value);
+        } while (!done); //while (!value.equals("E"));
     }
 
     @Override
@@ -56,14 +57,17 @@ public abstract class View implements ViewInterface {
                 selection = selection.trim();
             
         if (selection.length() < 1) {
-                System.out.println("You must enter a value.");
+                //System.out.println("You must enter a value.");
+                ErrorView.display(this.getClass().getName(), "You must enter a value");
                 continue;
             }
             break;
         }
         
         } catch (Exception e) {
-            System.out.println("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+            //System.out.println("Error reading input: " + e.getMessage());
+            //return null;
             }
             
         //returns name    
