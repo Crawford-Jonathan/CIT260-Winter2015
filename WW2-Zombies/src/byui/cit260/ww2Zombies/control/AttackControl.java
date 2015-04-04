@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.ww2Zombies.control;
+
+//package byui.cit260.ww2Zombies.control;
 
 /**
  *
  * @author Jonathan
  */
+/*
 public class AttackControl {
     
 }
+*/

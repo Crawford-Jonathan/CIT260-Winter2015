@@ -7,11 +7,11 @@ package byui.cit260.ww2Zombies.view;
 
 import java.io.*;
 //import java.io.BufferedReader;
-import java.io.IOException;
+//import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.Scanner;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 import ww2.zombies.main.WW2Zombies;
 
 /**

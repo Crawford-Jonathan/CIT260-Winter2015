@@ -7,7 +7,7 @@ package byui.cit260.ww2Zombies.view;
 
 import byui.cit260.ww2Zombies.control.GameControl;
 import byui.cit260.ww2Zombies.exceptions.MapControlException;
-import java.util.Scanner;
+//import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import ww2.zombies.main.WW2Zombies;

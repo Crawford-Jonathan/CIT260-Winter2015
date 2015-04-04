@@ -7,7 +7,7 @@ package byui.cit260.ww2Zombies.view;
 
 import byui.cit260.ww2Zombies.control.GameControl;
 import byui.cit260.ww2Zombies.model.Inventory;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *

@@ -7,10 +7,10 @@ package byui.cit260.ww2Zombies.view;
 
 import byui.cit260.ww2Zombies.control.ProgramControl;
 import byui.cit260.ww2Zombies.model.Player;
-import java.io.IOException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.io.IOException;
+//import java.util.Scanner;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 /**
  * display title screen / banner press enter to continue and enter name continue
