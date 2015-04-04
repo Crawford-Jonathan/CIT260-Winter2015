@@ -31,52 +31,30 @@ public class WW2Zombies {
     
     private static PrintWriter logFile = null;
 
-    public static PrintWriter getLogFile() {
-        return logFile;
-    }
-
-    public static void setLogFile(PrintWriter logFile) {
-        WW2Zombies.logFile = logFile;
-    }
-
-    public static Game getCurrentGame() {
-        return currentGame;
-    }
-
-    public static void setCurrentGame(Game currentGame) {
-        WW2Zombies.currentGame = currentGame;
-    }
-
-    public static Player getPlayer() {
-        return player;
-    }
-
-    public static void setPlayer(Player player) {
-        WW2Zombies.player = player;
-    }
+    
 
     public static void main(String[] args) {
         
         StartProgramView startProgramView = new StartProgramView();
             
             try{
+                //nullPointerException Error.  
                 startProgramView.display();
-                //View.display();
-            } catch (Throwable te){
+        /**    } catch (Throwable te){
             System.out.println(te.getMessage());
                 te.printStackTrace();
                 startProgramView.display();
-                //View.display();
             }
+        */
         
-        
-        try {
+        //try {
             WW2Zombies.inFile = new BufferedReader(new InputStreamReader(System.in));
             WW2Zombies.outFile = new PrintWriter(System.out, true);
             
             //open log file
             String filePath = "log.txt";
             WW2Zombies.logFile = new PrintWriter(filePath);
+            
         } catch (Exception e) {
             System.out.println(
                     "Exception: " + e.toString() +
@@ -103,6 +81,24 @@ public class WW2Zombies {
 
     }
     
+    
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        WW2Zombies.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        WW2Zombies.player = player;
+    }
+
     //getter and setter function for PrintWriter and BufferedReader
     public static PrintWriter getOutFile() {
         return outFile;
@@ -120,4 +116,12 @@ public class WW2Zombies {
         WW2Zombies.inFile = inFile;
     }
 
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        WW2Zombies.logFile = logFile;
+    }
+    
 }

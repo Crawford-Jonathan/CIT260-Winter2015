@@ -33,6 +33,7 @@ public abstract class View implements ViewInterface {
         String value;
 
         do {  
+            //throwing NullPointException Error, console is getting null
             this.console.println(this.promptMessage);
             value = this.getInput();
             this.doAction(value);
@@ -42,48 +43,33 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
         
-        //Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String selection = null;
-        //Scanner keyboard = new Scanner(System.in);
 
+        try {
+        //while there is no valid name retrieved
         while (!valid) {
-            System.out.println("\t\nEnter your selection:");
+            //System.out.println("\t\nEnter your selection:");
 
-            try {
-                selection = keyboard.readLine();
-            } catch (IOException ex) {
-                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            selection = selection.trim();
-
-            if (selection.length() < 1) {
+            
+                selection = this.keyboard.readLine();
+                selection = selection.trim();
+            
+        if (selection.length() < 1) {
                 System.out.println("You must enter a value.");
                 continue;
             }
             break;
         }
+        
+        } catch (Exception e) {
+            System.out.println("Error reading input: " + e.getMessage());
+            }
+            
+        //returns name    
         return selection;
     }
 
-    /**
-     * while (!valid) {
-     *
-     * System.out.println("Enter Command");
-     *
-     * selection = keyboard.nextLine(); selection = selection.trim();
-     *
-     * if (selection.length() != 1) { System.out.println("Invalid Input");
-     *
-     * continue; }
-     *
-     * break; }
-     *
-     * return selection;
-     *
-     * }
-     * @return 
-     */
     public String getPromptMessage() {
         return promptMessage;
     }
