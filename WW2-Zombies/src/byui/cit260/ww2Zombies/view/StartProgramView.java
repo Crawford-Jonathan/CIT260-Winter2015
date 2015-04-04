@@ -22,7 +22,7 @@ public class StartProgramView extends View {
     public StartProgramView() {
         super("\n\n*********************************************************"
                 + "\n*                                                       *"
-                + "\n*              Welcome to the Jungle                    *"
+                + "\n*               Welcome to the Jungle                   *"
                 + "\n*              Congradulations Soldier!                 *"
                 + "\n*     You have been selected for a special mission.     *"
                 + "\n*            Mission Briefing will follow.              *"
@@ -53,9 +53,7 @@ public class StartProgramView extends View {
     }
 
     @Override
-    public boolean doAction(Object obj) {
-        
-       
+    public boolean doAction(Object obj) { 
         
         String playersName = (String)obj;
         Player player = ProgramControl.createPlayer(playersName);
@@ -68,7 +66,7 @@ public class StartProgramView extends View {
 
         mainMenu.display();
         return false;
-        //return display();
+        //return true;
     }
 
     /**
