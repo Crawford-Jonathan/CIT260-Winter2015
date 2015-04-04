@@ -35,7 +35,8 @@ public abstract class View implements ViewInterface {
         boolean done = false;
         
         do {  
-            //throwing NullPointException Error, console is getting null
+            //throwing NullPointException Error, console is getting null from outFile.
+            //outFile is referncing from the Main, not sure where exactly.
             this.console.println(this.promptMessage);
             value = this.getInput();
             done = this.doAction(value);
