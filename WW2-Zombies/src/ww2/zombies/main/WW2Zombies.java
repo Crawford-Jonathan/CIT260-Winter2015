@@ -47,18 +47,18 @@ public class WW2Zombies {
         System.out.println(playerInfo);
         */
         
-        StartProgramView startProgramView = new StartProgramView();
+
             //startProgramView.display();
-            
+            /**
             try{
                 //nullPointerException Error.  
-                startProgramView.display();
+                
             } catch (Throwable te){
             System.out.println(te.getMessage());
                 te.printStackTrace();
                 startProgramView.display();
             }
-        
+        */
         
         try {
             WW2Zombies.inFile = new BufferedReader(new InputStreamReader(System.in));
@@ -68,6 +68,9 @@ public class WW2Zombies {
             String filePath = "log.txt";
             WW2Zombies.logFile = new PrintWriter(filePath);
             
+            StartProgramView startProgramView = new StartProgramView(); 
+            startProgramView.display();
+                
         } catch (Exception e) {
             System.out.println(
                     "Exception: " + e.toString() +
