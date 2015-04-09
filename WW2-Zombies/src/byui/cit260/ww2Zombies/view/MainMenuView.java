@@ -108,7 +108,7 @@ public class MainMenuView extends View {
     }
     
     private void exitGame() {
-        System.out.println("exit the game function");
+        System.out.println("exit the game");
     }
 }
 
